@@ -1,0 +1,22 @@
+comment: Returns the user associated with the passed access_token.
+↓Call_Sequence [steps.SequenceStep-1640714711842]: 
+  sourceSequence: lib_StackExchange.checkAccessToken
+↓Call_Transaction [steps.TransactionStep-1640713989752]: 
+  output: true
+  sourceTransaction: lib_StackExchange.persite_info.info
+  ↓access_token [variables.StepVariable-1640713989754]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640714711842
+          - java.lang.String: 
+            - ↑value: ./document/token/text()
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xd8e180806a1c1d83a6255212121ab827
+    visibility: '-1'
+  ↓site [variables.StepVariable-1640714115520]: 
+    value: stackoverflow

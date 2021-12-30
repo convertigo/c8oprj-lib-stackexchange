@@ -1,0 +1,48 @@
+↓Call_Transaction [steps.TransactionStep-1640701878198]: 
+  sourceTransaction: lib_StackExchange.stackoverflow.access_token
+  ↓client_id [variables.StepVariable-1640701878200]: 
+  ↓client_secret [variables.StepVariable-1640701878202]: 
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xd8e180806a1c1d83a6255212121ab827
+    visibility: '-1'
+  ↓code [variables.StepVariable-1640701878204]: 
+  ↓redirect_uri [variables.StepVariable-1640701878206]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640711504335]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640701878198
+        - java.lang.String: 
+          - ↑value: ./document/object/access_token
+  ↓jThen [steps.ThenStep-1640711505033]: 
+    ↓login [steps.XMLElementStep-1640711563656]: 
+      nodeName: login
+      nodeText: ok
+    ↓SetOAuthTokenInSession [steps.SessionSetStep-1640711575198]: 
+      expression: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+          - SmartType: 
+            - ↑mode: SOURCE
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640701878198
+              - java.lang.String: 
+                - ↑value: ./document/object/access_token/text()
+      key: oAuthAccessToken
+  ↓jElse [steps.ElseStep-1640711505035]: 
+↓client_id [variables.RequestableVariable-1640701852686]: 
+  value: ${lib_stackexchange.client_id}
+↓client_secret [variables.RequestableVariable-1640701852689]: 
+  value: 
+    - ↑ciphered: true
+    - ↑traceable: false
+    - →→: xdf426205cb83a225ee6a11b210de9d100d6c4fa46bbef949d5b0321d50b8982af92005985801d7450621d39d92ad1879
+  visibility: '-1'
+↓redirect_uri [variables.RequestableVariable-1640701852692]: 
+  value: ${lib_stackexchange.redirect_uri}
+↓code [variables.RequestableVariable-1640701865415]: 

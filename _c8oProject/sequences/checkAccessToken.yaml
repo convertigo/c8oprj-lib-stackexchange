@@ -1,0 +1,26 @@
+comment: Checks if a valid access token is held by the current users' session.
+↓GetTokenFromUserSession [steps.SessionGetStep-1640689144578]: 
+  key: oAuthAccessToken
+↓IfExistThenElse [steps.IfExistStep-1640689144581]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640689144578
+        - java.lang.String: 
+          - ↑value: ./expression
+  ↓login [steps.XMLElementStep-1640689144593]: 
+    nodeName: token
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640689144578
+          - java.lang.String: 
+            - ↑value: ./expression/text()
+  ↓Return [steps.ReturnStep-1640689144596]: 
+↓login [steps.XMLElementStep-1640689144599]: 
+  nodeName: notoken
+  nodeText: true

@@ -1,0 +1,105 @@
+comment: Reads the properties for a set of access tokens.
+↓jIf [steps.IfStep-1640771499853]: 
+  condition: access_tokens != null && access_tokens.length > 0
+  ↓init_vars [steps.SimpleStep-1640775175760]: 
+    expression: |
+      page="1";
+      pagesize="30";
+      hasMore=true;
+      max=500;
+  ↓jElement [steps.ElementStep-1640770725449]: 
+    expression: access_tokens.join(";")
+    nodeName: tokens
+    output: false
+  ↓jWhile [steps.WhileStep-1640775175763]: 
+    condition: hasMore==true && max-->0
+    ↓Call_Transaction [steps.TransactionStep-1640770248174]: 
+      sourceTransaction: lib_StackExchange.network_access_tokens.access_tokens
+      ↓accessTokens [variables.StepVariable-1640770248178]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640770725449
+              - java.lang.String: 
+                - ↑value: ./text()
+        value: 
+          - ↑ciphered: true
+          - ↑traceable: false
+          - →→: xd8e180806a1c1d83a6255212121ab827
+        visibility: '-1'
+      ↓filter [variables.StepVariable-1640772282858]: 
+        value: default
+      ↓page [variables.StepVariable-1640775123930]: 
+      ↓pagesize [variables.StepVariable-1640775123932]: 
+    ↓IfExistThenElse [steps.IfExistThenElseStep-1640771895354]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640770248174
+            - java.lang.String: 
+              - ↑value: ./document/object/items
+      ↓jThen [steps.ThenStep-1640771895967]: 
+        ↓Copy [steps.XMLCopyStep-1640771976143]: 
+          sourceDefinition: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1640770248174
+                - java.lang.String: 
+                  - ↑value: ./document/object
+      ↓jElse [steps.ElseStep-1640771895969]: 
+        ↓Copy1 [steps.XMLCopyStep-1640771989506]: 
+          sourceDefinition: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1640770248174
+                - java.lang.String: 
+                  - ↑value: ./document
+    ↓jSimpleSource [steps.SimpleSourceStep-1640775175796]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640770248174
+            - java.lang.String: 
+              - ↑value: ./document/object/has_more/text()
+      variableName: jHasMore
+    ↓jIfThenElse [steps.IfThenElseStep-1640775175799]: 
+      condition: jHasMore == "true"
+      ↓jThen [steps.ThenStep-1640775175802]: 
+        ↓mod_vars [steps.SimpleStep-1640775175805]: 
+          expression: |
+            page=""+(page*1+1);
+            hasMore=true;
+            max=500;
+      ↓jElse [steps.ElseStep-1640775175808]: 
+        ↓mod_vars [steps.SimpleStep-1640775175811]: 
+          expression: hasMore=false;
+↓access_tokens [variables.RequestableMultiValuedVariable-1640770283898]: 
+  value: 
+    - ↑traceable: false
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+  visibility: '-1'
+↓Test_Case [core.TestCase]: 
+  ↓access_tokens [variables.TestCaseMultiValuedVariable-1640770917552]: 
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: x56996e50b89742223ae669d5977ece96a7ade14807bbd68a7773f61dc0ee6015
+          - java.lang.String: 
+            - ↑value: xe7dd5469783b3795c08fa85a32d6fe199070383bee453b3aedf9a729ce00727c
+    visibility: '-1'

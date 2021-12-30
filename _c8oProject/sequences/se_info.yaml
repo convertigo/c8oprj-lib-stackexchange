@@ -1,0 +1,40 @@
+comment: Returns a collection of statistics about the site.
+↓Call_Transaction [steps.TransactionStep-1640785691383]: 
+  sourceTransaction: lib_StackExchange.persite_info.info
+  ↓site [variables.StepVariable-1640785691387]: 
+    value: stackoverflow
+  ↓filter [variables.StepVariable-1640790706336]: 
+    value: default
+↓IfExistThenElse [steps.IfExistThenElseStep-1640785713969]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640785691383
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640785713972]: 
+    ↓Copy [steps.XMLCopyStep-1640785713975]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640785691383
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640785713978]: 
+    ↓Copy1 [steps.XMLCopyStep-1640785713981]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640785691383
+            - java.lang.String: 
+              - ↑value: ./document
+↓site [variables.RequestableVariable-1640785697892]: 
+  value: stackoverflow
+↓filter [variables.RequestableVariable-1640790713332]: 
+  value: default

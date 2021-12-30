@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_StackExchange_ns="http://www.convertigo.com/convertigo/projects/lib_StackExchange" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_StackExchange">
+    <xsd:element name="persite_info__info" type="lib_StackExchange_ns:persite_info__infoRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="persite_info__infoResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="lib_StackExchange_ns:persite_info__infoResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="persite_info__infoResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="lib_StackExchange_ns:persite_info__infoResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info__infoRequestData">
+        <xsd:sequence>
+            <xsd:element name="key" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="filter" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="site" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_has_moreType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_answers_per_minuteType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_api_revisionType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_badges_per_minuteType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_new_active_usersType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_questions_per_minuteType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_acceptedType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_answersType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_badgesType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_commentsType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_questionsType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_unansweredType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_usersType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_object_total_votesType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_items_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="answers_per_minute" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_answers_per_minuteType"/>
+            <xsd:element minOccurs="0" name="api_revision" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_api_revisionType"/>
+            <xsd:element minOccurs="0" name="badges_per_minute" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_badges_per_minuteType"/>
+            <xsd:element minOccurs="0" name="new_active_users" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_new_active_usersType"/>
+            <xsd:element minOccurs="0" name="questions_per_minute" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_questions_per_minuteType"/>
+            <xsd:element minOccurs="0" name="total_accepted" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_acceptedType"/>
+            <xsd:element minOccurs="0" name="total_answers" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_answersType"/>
+            <xsd:element minOccurs="0" name="total_badges" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_badgesType"/>
+            <xsd:element minOccurs="0" name="total_comments" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_commentsType"/>
+            <xsd:element minOccurs="0" name="total_questions" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_questionsType"/>
+            <xsd:element minOccurs="0" name="total_unanswered" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_unansweredType"/>
+            <xsd:element minOccurs="0" name="total_users" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_usersType"/>
+            <xsd:element minOccurs="0" name="total_votes" type="lib_StackExchange_ns:persite_info_info_document_object_items_object_total_votesType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_itemsType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_StackExchange_ns:persite_info_info_document_object_items_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_quota_maxType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_object_quota_remainingType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info_info_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="has_more" type="lib_StackExchange_ns:persite_info_info_document_object_has_moreType"/>
+            <xsd:element minOccurs="0" name="items" type="lib_StackExchange_ns:persite_info_info_document_object_itemsType"/>
+            <xsd:element minOccurs="0" name="quota_max" type="lib_StackExchange_ns:persite_info_info_document_object_quota_maxType"/>
+            <xsd:element minOccurs="0" name="quota_remaining" type="lib_StackExchange_ns:persite_info_info_document_object_quota_remainingType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_info__infoResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_StackExchange_ns:persite_info_info_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_StackExchange_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_StackExchange_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="lib_StackExchange_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

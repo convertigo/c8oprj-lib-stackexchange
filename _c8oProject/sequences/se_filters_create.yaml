@@ -1,0 +1,107 @@
+comment: Creates a new filter given a list of includes, excludes, a base filter, and whether or not this filter should be "unsafe".
+↓jIf [steps.IfStep-1640783378691]: 
+  condition: includes != null && includes.length > 0
+  ↓jElement [steps.ElementStep-1640783378694]: 
+    expression: includes.join(";")
+    nodeName: includes
+    output: false
+↓jIf1 [steps.IfStep-1640784008339]: 
+  condition: excludes != null && excludes.length > 0
+  ↓jElement [steps.ElementStep-1640784008342]: 
+    expression: excludes.join(";")
+    nodeName: excludes
+    output: false
+↓Call_Transaction [steps.TransactionStep-1640783429448]: 
+  sourceTransaction: lib_StackExchange.network_filters.filters_create
+  ↓filter [variables.StepVariable-1640783429452]: 
+    value: default
+  ↓unsafe [variables.StepVariable-1640783429454]: 
+    value: false
+  ↓include [variables.StepVariable-1640783429456]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640783378694
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓exclude [variables.StepVariable-1640783429458]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640784008342
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓base [variables.StepVariable-1640783429460]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640783378709]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640783429448
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640783378712]: 
+    ↓Copy [steps.XMLCopyStep-1640783378715]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640783429448
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640783378718]: 
+    ↓Copy1 [steps.XMLCopyStep-1640783378721]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640783429448
+            - java.lang.String: 
+              - ↑value: ./document/object
+↓includes [variables.RequestableMultiValuedVariable-1640783501628]: 
+↓excludes [variables.RequestableMultiValuedVariable-1640783512938]: 
+↓base [variables.RequestableVariable-1640783784962]: 
+  value: none
+↓filter [variables.RequestableVariable-1640783830125]: 
+  value: default
+↓unsafe [variables.RequestableVariable-1640783830127]: 
+  value: false
+↓Test_Case [core.TestCase]: 
+  ↓includes [variables.TestCaseMultiValuedVariable-1640784207970]: 
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: .items
+          - java.lang.String: 
+            - ↑value: .has_more
+  ↓excludes [variables.TestCaseMultiValuedVariable-1640784207972]: 
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: .quota_max
+  ↓base [variables.TestCaseVariable-1640784207974]: 
+    value: none
+  ↓filter [variables.TestCaseVariable-1640784207976]: 
+    value: '!NkHRXGUe1i'
+  ↓unsafe [variables.TestCaseVariable-1640784207978]: 
+    value: false
+↓Test_Case_1 [core.TestCase]: 
+  ↓includes [variables.TestCaseMultiValuedVariable-1640864946916]: 
+  ↓excludes [variables.TestCaseMultiValuedVariable-1640864946918]: 
+  ↓base [variables.TestCaseVariable-1640864946920]: 
+    value: 
+  ↓filter [variables.TestCaseVariable-1640864946922]: 
+    value: default
+  ↓unsafe [variables.TestCaseVariable-1640864946924]: 
+    value: false

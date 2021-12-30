@@ -1,0 +1,35 @@
+https: true
+port: 443
+server: stackoverflow.com
+↓access_token [transactions.JsonHttpTransaction]: 
+  httpVerb: POST
+  subDir: oauth/access_token/json
+  ↓client_id [variables.RequestableHttpVariable-1640686201772]: 
+    httpMethod: POST
+    httpName: client_id
+  ↓client_secret [variables.RequestableHttpVariable-1640686245870]: 
+    httpMethod: POST
+    httpName: client_secret
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xd8e180806a1c1d83a6255212121ab827
+    visibility: '-1'
+  ↓code [variables.RequestableHttpVariable-1640686311801]: 
+    httpMethod: POST
+    httpName: code
+  ↓redirect_uri [variables.RequestableHttpVariable-1640686201775]: 
+    httpMethod: POST
+    httpName: redirect_uri
+↓oauth [transactions.HttpTransaction]: 
+  ↑default: true
+  httpInfo: true
+  subDir: oauth
+  ↓client_id [variables.RequestableHttpVariable-1640685949198]: 
+    httpName: client_id
+  ↓scope [variables.RequestableHttpVariable-1640685964545]: 
+    httpName: scope
+  ↓redirect_uri [variables.RequestableHttpVariable-1640685976269]: 
+    httpName: redirect_uri
+  ↓state [variables.RequestableHttpVariable-1640685994636]: 
+    httpName: state

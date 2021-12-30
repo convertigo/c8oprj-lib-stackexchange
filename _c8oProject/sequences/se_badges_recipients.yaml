@@ -1,0 +1,48 @@
+comment: Returns recently awarded badges in the system.
+↓Call_Transaction [steps.TransactionStep-1640863539206]: 
+  sourceTransaction: lib_StackExchange.persite_badges.badges_recipients
+  ↓filter [variables.StepVariable-1640863588106]: 
+    value: default
+  ↓site [variables.StepVariable-1640863588108]: 
+    value: stackoverflow
+  ↓page [variables.StepVariable-1640863588110]: 
+  ↓pagesize [variables.StepVariable-1640863588112]: 
+  ↓fromdate [variables.StepVariable-1640863588114]: 
+  ↓todate [variables.StepVariable-1640863588116]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640863539242]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640863539206
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640863539245]: 
+    ↓Copy [steps.XMLCopyStep-1640863539248]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640863539206
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640863539251]: 
+    ↓Copy1 [steps.XMLCopyStep-1640863539254]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640863539206
+            - java.lang.String: 
+              - ↑value: ./document
+↓site [variables.RequestableVariable-1640863539257]: 
+  value: stackoverflow
+↓filter [variables.RequestableVariable-1640863539260]: 
+  value: default
+↓page [variables.RequestableVariable-1640863539263]: 
+↓pagesize [variables.RequestableVariable-1640863539266]: 
+↓fromdate [variables.RequestableVariable-1640863539269]: 
+↓todate [variables.RequestableVariable-1640863539272]: 

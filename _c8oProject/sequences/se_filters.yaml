@@ -1,0 +1,60 @@
+comment: Returns the fields included by the given filters, and the "safeness" of those filters.
+↓jIf [steps.IfStep-1640781957564]: 
+  condition: filters != null && filters.length > 0
+  ↓jElement [steps.ElementStep-1640781914957]: 
+    expression: filters.join(";")
+    nodeName: filters
+    output: false
+  ↓Call_Transaction [steps.TransactionStep-1640781734692]: 
+    sourceTransaction: lib_StackExchange.network_filters.filters
+    ↓filter [variables.StepVariable-1640781734696]: 
+      value: default
+    ↓filters [variables.StepVariable-1640781734698]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640781914957
+            - java.lang.String: 
+              - ↑value: ./text()
+  ↓IfExistThenElse [steps.IfExistThenElseStep-1640781957594]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640781734692
+          - java.lang.String: 
+            - ↑value: ./document/object/items
+    ↓jThen [steps.ThenStep-1640781957597]: 
+      ↓Copy [steps.XMLCopyStep-1640781957600]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640781734692
+              - java.lang.String: 
+                - ↑value: ./document/object
+    ↓jElse [steps.ElseStep-1640781957603]: 
+      ↓Copy1 [steps.XMLCopyStep-1640781957606]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640781734692
+              - java.lang.String: 
+                - ↑value: ./document/object
+↓filters [variables.RequestableMultiValuedVariable-1640781841200]: 
+↓Test_Case [core.TestCase]: 
+  ↓filters [variables.TestCaseMultiValuedVariable-1640782091041]: 
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: default
+          - java.lang.String: 
+            - ↑value: '!nKzQUR6(B-'

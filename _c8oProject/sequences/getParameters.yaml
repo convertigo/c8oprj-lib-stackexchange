@@ -1,0 +1,14 @@
+↓parameters [steps.XMLComplexStep-1640702154657]: 
+  nodeName: parameters
+  ↓Attribute [steps.XMLAttributeStep-1640702954848]: 
+    nodeName: type
+    nodeText: object
+  ↓client_id [steps.XMLElementStep-1640702257401]: 
+    nodeName: client_id
+    nodeText: ${lib_stackexchange.client_id}
+  ↓scope [steps.XMLElementStep-1640702340503]: 
+    nodeName: scope
+    nodeText: ${lib_stackexchange.scope}
+  ↓redirect_uri [steps.XMLElementStep-1640702892928]: 
+    nodeName: redirect_uri
+    nodeText: ${lib_stackexchange.redirect_uri}

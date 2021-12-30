@@ -1,0 +1,41 @@
+↑isRoot: true
+segment: path-to-page
+title: Title for Page
+↓Content [mobile.components.UIDynamicElement-1640688726205]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+↓PageEvent [mobile.components.UIPageEvent-1640688743221]: 
+  ↓CallSequence [mobile.components.UIDynamicAction-1640702982312]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_StackExchange.getParameters"}'
+    ↓checkResponse [mobile.components.UICustomAction-1640703035962]: 
+      actionValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+              		const r = vars.response;
+              		if("parameters" in r && "client_id" in r["parameters"] && "scope" in r["parameters"] && "redirect_uri" in r["parameters"]){
+              			r["parameters"]["redirect_uri"] = "https://"+r["parameters"]["redirect_uri"]+"/convertigo/projects/lib_OAuth/getTokenGoogle.html"
+              			//page.c8o.log.warn(''response:'' + JSON.stringify(vars.response));
+              			resolve(r);
+              		}
+              '
+      ↓OAuthLogin [mobile.components.UIDynamicAction-1640688756621]: 
+        beanData: |
+          '{
+           "ionBean": "OAuthLoginAction",
+           "provider": "plain:openid",
+           "clientid": "script:out[\"parameters\"][\"client_id\"]",
+           "scope": "script:out[\"parameters\"][\"scope\"]",
+           "response_type": "plain:code",
+           "loginRequestable": "plain:lib_StackExchange.loginStackExchange",
+           "checkAccessTokenRequestable": "plain:lib_StackExchange.checkAccessToken",
+           "authorization_endpoint": "plain:https:\/\/stackoverflow.com\/oauth",
+           "callbackurl": "script:out[\"parameters\"][\"redirect_uri\"]"
+          }'
+      ↓response [mobile.components.UIControlVariable-1640703519713]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:out

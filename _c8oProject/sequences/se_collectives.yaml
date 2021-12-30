@@ -1,0 +1,60 @@
+comment: Returns all Collectives in the system.
+↓Call_Transaction [steps.TransactionStep-1640876473644]: 
+  sourceTransaction: lib_StackExchange.persite_collectives.collectives
+  ↓filter [variables.StepVariable-1640876602718]: 
+    value: default
+  ↓page [variables.StepVariable-1640876602720]: 
+  ↓pagesize [variables.StepVariable-1640876602722]: 
+  ↓fromdate [variables.StepVariable-1640876602724]: 
+  ↓todate [variables.StepVariable-1640876602726]: 
+  ↓order [variables.StepVariable-1640876602728]: 
+    value: desc
+  ↓min [variables.StepVariable-1640876602730]: 
+  ↓max [variables.StepVariable-1640876602732]: 
+  ↓sort [variables.StepVariable-1640876602734]: 
+    value: name
+  ↓site [variables.StepVariable-1640876602736]: 
+    value: stackoverflow
+↓IfExistThenElse [steps.IfExistThenElseStep-1640876473683]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640876473644
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640876473686]: 
+    ↓Copy [steps.XMLCopyStep-1640876473689]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640876473644
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640876473692]: 
+    ↓Copy1 [steps.XMLCopyStep-1640876473695]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640876473644
+            - java.lang.String: 
+              - ↑value: ./document
+↓filter [variables.RequestableVariable-1640876617370]: 
+  value: default
+↓page [variables.RequestableVariable-1640876617372]: 
+↓pagesize [variables.RequestableVariable-1640876617374]: 
+↓fromdate [variables.RequestableVariable-1640876617376]: 
+↓todate [variables.RequestableVariable-1640876617378]: 
+↓order [variables.RequestableVariable-1640876617380]: 
+  value: desc
+↓min [variables.RequestableVariable-1640876617382]: 
+↓max [variables.RequestableVariable-1640876617384]: 
+↓sort [variables.RequestableVariable-1640876617386]: 
+  value: name
+↓site [variables.RequestableVariable-1640876617388]: 
+  value: stackoverflow
