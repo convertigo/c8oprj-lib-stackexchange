@@ -11,6 +11,7 @@
   ↓persite_collectives [connectors.HttpConnector]: 🗏 connectors/persite_collectives.yaml
   ↓persite_comments [connectors.HttpConnector]: 🗏 connectors/persite_comments.yaml
   ↓persite_info [connectors.HttpConnector]: 🗏 connectors/persite_info.yaml
+  ↓persite_posts [connectors.HttpConnector]: 🗏 connectors/persite_posts.yaml
   ↓stackoverflow [connectors.HttpConnector]: 🗏 connectors/stackoverflow.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓checkAccessToken [sequences.GenericSequence]: 🗏 sequences/checkAccessToken.yaml
@@ -43,6 +44,12 @@
   ↓se_filters_create [sequences.GenericSequence]: 🗏 sequences/se_filters_create.yaml
   ↓se_info [sequences.GenericSequence]: 🗏 sequences/se_info.yaml
   ↓se_me [sequences.GenericSequence]: 🗏 sequences/se_me.yaml
+  ↓se_posts [sequences.GenericSequence]: 🗏 sequences/se_posts.yaml
+  ↓se_posts_by_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_by_ids.yaml
+  ↓se_posts_comments_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_comments_ids.yaml
+  ↓se_posts_comments_render_id [sequences.GenericSequence]: 🗏 sequences/se_posts_comments_render_id.yaml
+  ↓se_posts_revisions_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_revisions_ids.yaml
+  ↓se_posts_suggested_edits_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_suggested_edits_ids.yaml
   ↓se_sites [sequences.GenericSequence]: 🗏 sequences/se_sites.yaml
   ↓signOut [sequences.GenericSequence]: 🗏 sequences/signOut.yaml
   ↓Project_reference [references.ProjectSchemaReference]: 

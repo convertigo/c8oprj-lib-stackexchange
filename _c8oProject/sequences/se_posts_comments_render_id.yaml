@@ -1,0 +1,54 @@
+comment: Render a comment given its body and the post it's on.
+↓jIf [steps.IfStep-1640883163958]: 
+  condition: id !== null && id.length>0
+  ↓Call_Transaction [steps.TransactionStep-1640883163964]: 
+    sourceTransaction: lib_StackExchange.persite_posts.posts_comments_render_id
+    ↓filter [variables.StepVariable-1640883396614]: 
+      value: default
+    ↓id [variables.StepVariable-1640883396616]: 
+    ↓body [variables.StepVariable-1640883396618]: 
+    ↓site [variables.StepVariable-1640883824916]: 
+      value: stackoverflow
+  ↓IfExistThenElse [steps.IfExistThenElseStep-1640883164000]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640883163964
+          - java.lang.String: 
+            - ↑value: ./document/object/items
+    ↓jThen [steps.ThenStep-1640883164003]: 
+      ↓Copy [steps.XMLCopyStep-1640883164006]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640883163964
+              - java.lang.String: 
+                - ↑value: ./document/object
+    ↓jElse [steps.ElseStep-1640883164009]: 
+      ↓Copy1 [steps.XMLCopyStep-1640883164012]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640883163964
+              - java.lang.String: 
+                - ↑value: ./document
+↓filter [variables.RequestableVariable-1640883405213]: 
+  value: default
+↓id [variables.RequestableVariable-1640883405215]: 
+↓body [variables.RequestableVariable-1640883405217]: 
+↓site [variables.RequestableVariable-1640883832640]: 
+  value: stackoverflow
+↓Test_Case [core.TestCase]: 
+  ↓filter [variables.TestCaseVariable-1640883417484]: 
+    value: default
+  ↓id [variables.TestCaseVariable-1640883417486]: 
+    value: 70534139
+  ↓body [variables.TestCaseVariable-1640883417488]: 
+  ↓site [variables.TestCaseVariable-1640883839600]: 
+    value: stackoverflow

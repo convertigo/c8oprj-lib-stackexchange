@@ -1,0 +1,86 @@
+comment: Returns suggested edits on the posts identified in ids.
+↓jIf [steps.IfStep-1640884660574]: 
+  condition: ids !== null && ids.length>0
+  ↓jElement [steps.ElementStep-1640884660577]: 
+    expression: ids.join(";")
+    nodeName: ids
+    output: false
+  ↓Call_Transaction [steps.TransactionStep-1640884660580]: 
+    sourceTransaction: lib_StackExchange.persite_posts.posts_suggested_edits_ids
+    ↓filter [variables.StepVariable-1640884660583]: 
+      value: default
+    ↓page [variables.StepVariable-1640884660586]: 
+    ↓pagesize [variables.StepVariable-1640884660589]: 
+    ↓fromdate [variables.StepVariable-1640884660592]: 
+    ↓todate [variables.StepVariable-1640884660595]: 
+    ↓order [variables.StepVariable-1640884660598]: 
+      value: desc
+    ↓min [variables.StepVariable-1640884660601]: 
+    ↓max [variables.StepVariable-1640884660604]: 
+    ↓sort [variables.StepVariable-1640884660607]: 
+      value: creation
+    ↓site [variables.StepVariable-1640884660610]: 
+      value: stackoverflow
+    ↓ids [variables.StepVariable-1640884660613]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640884660577
+            - java.lang.String: 
+              - ↑value: ./text()
+  ↓IfExistThenElse [steps.IfExistThenElseStep-1640884660616]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640884660580
+          - java.lang.String: 
+            - ↑value: ./document/object/items
+    ↓jThen [steps.ThenStep-1640884660619]: 
+      ↓Copy [steps.XMLCopyStep-1640884660622]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640884660580
+              - java.lang.String: 
+                - ↑value: ./document/object
+    ↓jElse [steps.ElseStep-1640884660625]: 
+      ↓Copy1 [steps.XMLCopyStep-1640884660628]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640884660580
+              - java.lang.String: 
+                - ↑value: ./document
+↓filter [variables.RequestableVariable-1640884660631]: 
+  value: default
+↓page [variables.RequestableVariable-1640884660634]: 
+↓pagesize [variables.RequestableVariable-1640884660637]: 
+↓fromdate [variables.RequestableVariable-1640884660640]: 
+↓todate [variables.RequestableVariable-1640884660643]: 
+↓order [variables.RequestableVariable-1640884660646]: 
+  value: desc
+↓min [variables.RequestableVariable-1640884660649]: 
+↓max [variables.RequestableVariable-1640884660652]: 
+↓sort [variables.RequestableVariable-1640884660655]: 
+  value: creation
+↓site [variables.RequestableVariable-1640884660658]: 
+  value: stackoverflow
+↓ids [variables.RequestableMultiValuedVariable-1640884660661]: 
+↓Test_Case [core.TestCase]: 
+  ↓site [variables.TestCaseVariable-1640884660665]: 
+    value: stackoverflow
+  ↓ids [variables.TestCaseMultiValuedVariable-1640884660668]: 
+    value: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 7142622
