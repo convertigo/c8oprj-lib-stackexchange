@@ -1,0 +1,69 @@
+comment: Searches a site for any questions which fit the given criteria.
+↓Call_Transaction [steps.TransactionStep-1640965735107]: 
+  sourceTransaction: lib_StackExchange.persite_search.search
+  ↓filter [variables.StepVariable-1640965770196]: 
+    value: default
+  ↓site [variables.StepVariable-1640965770198]: 
+    value: stackoverflow
+  ↓page [variables.StepVariable-1640965770200]: 
+  ↓pagesize [variables.StepVariable-1640965770202]: 
+  ↓fromdate [variables.StepVariable-1640965770204]: 
+  ↓todate [variables.StepVariable-1640965770206]: 
+  ↓order [variables.StepVariable-1640965770208]: 
+    value: desc
+  ↓min [variables.StepVariable-1640965770210]: 
+  ↓max [variables.StepVariable-1640965770212]: 
+  ↓sort [variables.StepVariable-1640965770214]: 
+    value: activity
+  ↓tagged [variables.StepVariable-1640965770216]: 
+  ↓nottagged [variables.StepVariable-1640965770218]: 
+  ↓intitle [variables.StepVariable-1640965770220]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640965735116]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640965735107
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640965735119]: 
+    ↓Copy [steps.XMLCopyStep-1640965735122]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640965735107
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640965735125]: 
+    ↓Copy1 [steps.XMLCopyStep-1640965735128]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640965735107
+            - java.lang.String: 
+              - ↑value: ./document
+↓site [variables.RequestableVariable-1640965735131]: 
+  value: stackoverflow
+↓filter [variables.RequestableVariable-1640965735134]: 
+  value: default
+↓page [variables.RequestableVariable-1640965790471]: 
+↓pagesize [variables.RequestableVariable-1640965790473]: 
+↓fromdate [variables.RequestableVariable-1640965790475]: 
+↓todate [variables.RequestableVariable-1640965790477]: 
+↓order [variables.RequestableVariable-1640965790479]: 
+  value: desc
+↓min [variables.RequestableVariable-1640965790481]: 
+↓max [variables.RequestableVariable-1640965790483]: 
+↓sort [variables.RequestableVariable-1640965790485]: 
+  value: activity
+↓tagged [variables.RequestableVariable-1640965790487]: 
+↓nottagged [variables.RequestableVariable-1640965790489]: 
+↓intitle [variables.RequestableVariable-1640965790491]: 
+↓Test_Case [core.TestCase]: 
+  ↓tagged [variables.TestCaseVariable-1640965802871]: 
+    value: convertigo

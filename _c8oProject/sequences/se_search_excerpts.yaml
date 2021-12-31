@@ -1,0 +1,92 @@
+comment: Searches a site for items which match the given criteria.
+↓Call_Transaction [steps.TransactionStep-1640966589662]: 
+  sourceTransaction: lib_StackExchange.persite_search.search_excerpts
+  ↓filter [variables.StepVariable-1640966589665]: 
+    value: default
+  ↓site [variables.StepVariable-1640966589668]: 
+    value: stackoverflow
+  ↓page [variables.StepVariable-1640966589671]: 
+  ↓pagesize [variables.StepVariable-1640966589674]: 
+  ↓fromdate [variables.StepVariable-1640966589677]: 
+  ↓todate [variables.StepVariable-1640966589680]: 
+  ↓order [variables.StepVariable-1640966589683]: 
+    value: desc
+  ↓min [variables.StepVariable-1640966589686]: 
+  ↓max [variables.StepVariable-1640966589689]: 
+  ↓sort [variables.StepVariable-1640966589692]: 
+    value: activity
+  ↓tagged [variables.StepVariable-1640966589695]: 
+  ↓nottagged [variables.StepVariable-1640966589698]: 
+  ↓title [variables.StepVariable-1640966589701]: 
+  ↓q [variables.StepVariable-1640966589704]: 
+  ↓accepted [variables.StepVariable-1640966589707]: 
+  ↓answers [variables.StepVariable-1640966589710]: 
+  ↓body [variables.StepVariable-1640966589713]: 
+  ↓closed [variables.StepVariable-1640966589716]: 
+  ↓migrated [variables.StepVariable-1640966589719]: 
+  ↓notice [variables.StepVariable-1640966589722]: 
+  ↓user [variables.StepVariable-1640966589725]: 
+  ↓url [variables.StepVariable-1640966589728]: 
+  ↓views [variables.StepVariable-1640966589731]: 
+  ↓wiki [variables.StepVariable-1640966589734]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640966589737]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640966589662
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640966589740]: 
+    ↓Copy [steps.XMLCopyStep-1640966589743]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640966589662
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640966589746]: 
+    ↓Copy1 [steps.XMLCopyStep-1640966589749]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640966589662
+            - java.lang.String: 
+              - ↑value: ./document
+↓site [variables.RequestableVariable-1640966589752]: 
+  value: stackoverflow
+↓filter [variables.RequestableVariable-1640966589755]: 
+  value: default
+↓page [variables.RequestableVariable-1640966589758]: 
+↓pagesize [variables.RequestableVariable-1640966589761]: 
+↓fromdate [variables.RequestableVariable-1640966589764]: 
+↓todate [variables.RequestableVariable-1640966589767]: 
+↓order [variables.RequestableVariable-1640966589770]: 
+  value: desc
+↓min [variables.RequestableVariable-1640966589773]: 
+↓max [variables.RequestableVariable-1640966589776]: 
+↓sort [variables.RequestableVariable-1640966589779]: 
+  value: activity
+↓tagged [variables.RequestableVariable-1640966589782]: 
+↓nottagged [variables.RequestableVariable-1640966589785]: 
+↓intitle [variables.RequestableVariable-1640966589788]: 
+↓title [variables.RequestableVariable-1640966589791]: 
+↓q [variables.RequestableVariable-1640966589794]: 
+↓accepted [variables.RequestableVariable-1640966589797]: 
+↓answers [variables.RequestableVariable-1640966589800]: 
+↓body [variables.RequestableVariable-1640966589803]: 
+↓closed [variables.RequestableVariable-1640966589806]: 
+↓migrated [variables.RequestableVariable-1640966589809]: 
+↓notice [variables.RequestableVariable-1640966589812]: 
+↓user [variables.RequestableVariable-1640966589815]: 
+↓url [variables.RequestableVariable-1640966589818]: 
+↓views [variables.RequestableVariable-1640966589821]: 
+↓wiki [variables.RequestableVariable-1640966589824]: 
+↓Test_Case [core.TestCase]: 
+  ↓tagged [variables.TestCaseVariable-1640966589828]: 
+    value: convertigo
