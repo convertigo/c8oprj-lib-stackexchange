@@ -1,0 +1,65 @@
+comment: Returns the various error codes that can be produced by the API.
+↓init_vars [steps.SimpleStep-1640947609206]: 
+  expression: |
+    page="1";
+    pagesize="30";
+    hasMore=true;
+    max=500;
+↓jWhile [steps.WhileStep-1640947609212]: 
+  condition: hasMore==true && max-->0
+  ↓Call_Transaction [steps.TransactionStep-1640946915240]: 
+    sourceTransaction: lib_StackExchange.network_errors.errors
+    ↓filter [variables.StepVariable-1640947055037]: 
+      value: default
+    ↓page [variables.StepVariable-1640947055039]: 
+    ↓pagesize [variables.StepVariable-1640947055041]: 
+  ↓IfExistThenElse [steps.IfExistThenElseStep-1640946915255]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640946915240
+          - java.lang.String: 
+            - ↑value: ./document/object/items
+    ↓jThen [steps.ThenStep-1640946915258]: 
+      ↓Copy [steps.XMLCopyStep-1640946915261]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640946915240
+              - java.lang.String: 
+                - ↑value: ./document/object
+    ↓jElse [steps.ElseStep-1640946915264]: 
+      ↓Copy1 [steps.XMLCopyStep-1640946915267]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640946915240
+              - java.lang.String: 
+                - ↑value: ./document
+  ↓jSimpleSource [steps.SimpleSourceStep-1640947609245]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640946915240
+          - java.lang.String: 
+            - ↑value: ./document/object/has_more/text()
+    variableName: jHasMore
+  ↓jIfThenElse [steps.IfThenElseStep-1640947609248]: 
+    condition: jHasMore == "true"
+    ↓jThen [steps.ThenStep-1640947609251]: 
+      ↓mod_vars [steps.SimpleStep-1640947609254]: 
+        expression: |
+          page=""+(page*1+1);
+          hasMore=true;
+          max=500;
+    ↓jElse [steps.ElseStep-1640947609257]: 
+      ↓mod_vars [steps.SimpleStep-1640947609260]: 
+        expression: hasMore=false;

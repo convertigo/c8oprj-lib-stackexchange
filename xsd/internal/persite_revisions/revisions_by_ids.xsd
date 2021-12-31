@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_StackExchange_ns="http://www.convertigo.com/convertigo/projects/lib_StackExchange" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_StackExchange">
+    <xsd:element name="persite_revisions__revisions_by_ids" type="lib_StackExchange_ns:persite_revisions__revisions_by_idsRequestData">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[Get all revisions identified by a set of ids.
+]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="persite_revisions__revisions_by_idsResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="lib_StackExchange_ns:persite_revisions__revisions_by_idsResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="persite_revisions__revisions_by_idsResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="lib_StackExchange_ns:persite_revisions__revisions_by_idsResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions__revisions_by_idsRequestData">
+        <xsd:sequence>
+            <xsd:element name="key" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="filter" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="page" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pagesize" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="fromdate" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="todate" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="site" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ids" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_has_moreType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_commentType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_content_licenseType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_creation_dateType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_is_rollbackType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_post_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_post_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_revision_guidType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_revision_numberType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_revision_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_set_community_wikiType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_account_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_display_nameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_linkType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_profile_imageType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_reputationType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_user_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_user_user_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_object_userType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="account_id" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_account_idType"/>
+            <xsd:element minOccurs="0" name="display_name" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_display_nameType"/>
+            <xsd:element minOccurs="0" name="link" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_linkType"/>
+            <xsd:element minOccurs="0" name="profile_image" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_profile_imageType"/>
+            <xsd:element minOccurs="0" name="reputation" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_reputationType"/>
+            <xsd:element minOccurs="0" name="user_id" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_user_idType"/>
+            <xsd:element minOccurs="0" name="user_type" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_user_user_typeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_items_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="comment" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_commentType"/>
+            <xsd:element minOccurs="0" name="content_license" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_content_licenseType"/>
+            <xsd:element minOccurs="0" name="creation_date" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_creation_dateType"/>
+            <xsd:element minOccurs="0" name="is_rollback" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_is_rollbackType"/>
+            <xsd:element minOccurs="0" name="post_id" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_post_idType"/>
+            <xsd:element minOccurs="0" name="post_type" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_post_typeType"/>
+            <xsd:element minOccurs="0" name="revision_guid" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_revision_guidType"/>
+            <xsd:element minOccurs="0" name="revision_number" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_revision_numberType"/>
+            <xsd:element minOccurs="0" name="revision_type" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_revision_typeType"/>
+            <xsd:element minOccurs="0" name="set_community_wiki" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_set_community_wikiType"/>
+            <xsd:element minOccurs="0" name="user" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_object_userType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_itemsType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="object" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_items_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_quota_maxType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_object_quota_remainingType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions_revisions_by_ids_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="has_more" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_has_moreType"/>
+            <xsd:element minOccurs="0" name="items" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_itemsType"/>
+            <xsd:element minOccurs="0" name="quota_max" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_quota_maxType"/>
+            <xsd:element minOccurs="0" name="quota_remaining" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_object_quota_remainingType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="persite_revisions__revisions_by_idsResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_StackExchange_ns:persite_revisions_revisions_by_ids_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_StackExchange_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_StackExchange_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="lib_StackExchange_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,17 +1,13 @@
 https: true
 port: 443
-server: api.stackexchange.com/2.3
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
 ↓filters [transactions.JsonHttpTransaction]: 
   comment: Decode a set of filters, useful for debugging purposes.
   responseExpiryDate: daily,00:00:00
   subDir: filters/{filters}
   ↓key [variables.RequestableHttpVariable-1640854635943]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640854635946]: 
     httpName: filter
     value: default
@@ -23,11 +19,7 @@ server: api.stackexchange.com/2.3
   subDir: filters/create
   ↓key [variables.RequestableHttpVariable-1640854635953]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640854635956]: 
     httpName: filter
     value: default

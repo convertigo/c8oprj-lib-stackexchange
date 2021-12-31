@@ -1,0 +1,25 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓revisions_by_ids [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get all revisions identified by a set of ids.
+  subDir: revisions/{ids}
+  ↓key [variables.RequestableHttpVariable-1640943830417]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640943830420]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1640943830447]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1640943830423]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640943830426]: 
+    httpName: pagesize
+  ↓fromdate [variables.RequestableHttpVariable-1640943830429]: 
+    httpName: fromdate
+  ↓todate [variables.RequestableHttpVariable-1640943830432]: 
+    httpName: todate
+  ↓ids [variables.RequestableHttpVariable-1640943830450]: 

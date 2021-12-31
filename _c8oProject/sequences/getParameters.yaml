@@ -3,6 +3,9 @@
   ↓Attribute [steps.XMLAttributeStep-1640702954848]: 
     nodeName: type
     nodeText: object
+  ↓client_id1 [steps.XMLElementStep-1640951593828]: 
+    nodeName: key
+    nodeText: ${lib_stackexchange.key}
   ↓client_id [steps.XMLElementStep-1640702257401]: 
     nodeName: client_id
     nodeText: ${lib_stackexchange.client_id}

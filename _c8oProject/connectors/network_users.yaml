@@ -1,0 +1,66 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓associated [transactions.JsonHttpTransaction]: 
+  comment: Get a user's associated accounts.
+  responseExpiryDate: daily,00:00:00
+  subDir: users/{ids}/associated
+  ↓key [variables.RequestableHttpVariable-1640949202236]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640949202239]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640949202242]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640949202245]: 
+    httpName: pagesize
+  ↓ids [variables.RequestableHttpVariable-1640949226466]: 
+↓associated_me [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get a user's associated accounts.
+  responseExpiryDate: daily,00:00:00
+  subDir: me/associated
+  ↓key [variables.RequestableHttpVariable-1640948836567]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640948836570]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640948836573]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640948836576]: 
+    httpName: pagesize
+  ↓access_token [variables.RequestableHttpVariable-1640948921337]: 
+    httpName: access_token
+↓merges [transactions.JsonHttpTransaction]: 
+  comment: Get the merges a user's accounts has undergone.
+  responseExpiryDate: daily,00:00:00
+  subDir: users/{ids}/merges
+  ↓key [variables.RequestableHttpVariable-1640949519720]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640949519723]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640949519726]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640949519729]: 
+    httpName: pagesize
+  ↓ids [variables.RequestableHttpVariable-1640949519732]: 
+↓merges_me [transactions.JsonHttpTransaction]: 
+  comment: Get the merges a user's accounts has undergone.
+  responseExpiryDate: daily,00:00:00
+  subDir: me/merges
+  ↓key [variables.RequestableHttpVariable-1640949519736]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640949519739]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640949519742]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640949519745]: 
+    httpName: pagesize
+  ↓access_token [variables.RequestableHttpVariable-1640949519748]: 
+    httpName: access_token

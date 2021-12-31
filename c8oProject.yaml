@@ -3,8 +3,11 @@
   comment: Mashup Sequencer project
   version: 1.0
   ↓network_access_tokens [connectors.HttpConnector]: 🗏 connectors/network_access_tokens.yaml
+  ↓network_applications [connectors.HttpConnector]: 🗏 connectors/network_applications.yaml
+  ↓network_errors [connectors.HttpConnector]: 🗏 connectors/network_errors.yaml
   ↓network_filters [connectors.HttpConnector]: 🗏 connectors/network_filters.yaml
   ↓network_sites [connectors.HttpConnector]: 🗏 connectors/network_sites.yaml
+  ↓network_users [connectors.HttpConnector]: 🗏 connectors/network_users.yaml
   ↓persite_answers [connectors.HttpConnector]: 🗏 connectors/persite_answers.yaml
   ↓persite_articles [connectors.HttpConnector]: 🗏 connectors/persite_articles.yaml
   ↓persite_badges [connectors.HttpConnector]: 🗏 connectors/persite_badges.yaml
@@ -12,6 +15,8 @@
   ↓persite_comments [connectors.HttpConnector]: 🗏 connectors/persite_comments.yaml
   ↓persite_info [connectors.HttpConnector]: 🗏 connectors/persite_info.yaml
   ↓persite_posts [connectors.HttpConnector]: 🗏 connectors/persite_posts.yaml
+  ↓persite_privileges [connectors.HttpConnector]: 🗏 connectors/persite_privileges.yaml
+  ↓persite_revisions [connectors.HttpConnector]: 🗏 connectors/persite_revisions.yaml
   ↓stackoverflow [connectors.HttpConnector]: 🗏 connectors/stackoverflow.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓checkAccessToken [sequences.GenericSequence]: 🗏 sequences/checkAccessToken.yaml
@@ -23,6 +28,7 @@
   ↓se_answers_by_ids [sequences.GenericSequence]: 🗏 sequences/se_answers_by_ids.yaml
   ↓se_answers_comments [sequences.GenericSequence]: 🗏 sequences/se_answers_comments.yaml
   ↓se_answers_questions [sequences.GenericSequence]: 🗏 sequences/se_answers_questions.yaml
+  ↓se_applications_deauthenticate [sequences.GenericSequence]: 🗏 sequences/se_applications_deauthenticate.yaml
   ↓se_articles [sequences.GenericSequence]: 🗏 sequences/se_articles.yaml
   ↓se_articles_by_ids [sequences.GenericSequence]: 🗏 sequences/se_articles_by_ids.yaml
   ↓se_articles_linked_ids [sequences.GenericSequence]: 🗏 sequences/se_articles_linked_ids.yaml
@@ -40,6 +46,8 @@
   ↓se_collectives_slugs_users [sequences.GenericSequence]: 🗏 sequences/se_collectives_slugs_users.yaml
   ↓se_comments [sequences.GenericSequence]: 🗏 sequences/se_comments.yaml
   ↓se_comments_by_ids [sequences.GenericSequence]: 🗏 sequences/se_comments_by_ids.yaml
+  ↓se_error_id [sequences.GenericSequence]: 🗏 sequences/se_error_id.yaml
+  ↓se_errors [sequences.GenericSequence]: 🗏 sequences/se_errors.yaml
   ↓se_filters [sequences.GenericSequence]: 🗏 sequences/se_filters.yaml
   ↓se_filters_create [sequences.GenericSequence]: 🗏 sequences/se_filters_create.yaml
   ↓se_info [sequences.GenericSequence]: 🗏 sequences/se_info.yaml
@@ -50,6 +58,8 @@
   ↓se_posts_comments_render_id [sequences.GenericSequence]: 🗏 sequences/se_posts_comments_render_id.yaml
   ↓se_posts_revisions_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_revisions_ids.yaml
   ↓se_posts_suggested_edits_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_suggested_edits_ids.yaml
+  ↓se_privileges [sequences.GenericSequence]: 🗏 sequences/se_privileges.yaml
+  ↓se_revisions [sequences.GenericSequence]: 🗏 sequences/se_revisions.yaml
   ↓se_sites [sequences.GenericSequence]: 🗏 sequences/se_sites.yaml
   ↓signOut [sequences.GenericSequence]: 🗏 sequences/signOut.yaml
   ↓Project_reference [references.ProjectSchemaReference]: 

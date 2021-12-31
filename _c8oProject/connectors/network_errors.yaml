@@ -1,0 +1,29 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓error_by_id [transactions.JsonHttpTransaction]: 
+  comment: Simulate an API error for testing purposes.
+  responseExpiryDate: daily,00:00:00
+  subDir: errors/{id}
+  ↓key [variables.RequestableHttpVariable-1640946661334]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640946661337]: 
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1640946791974]: 
+↓errors [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get descriptions of all the errors that the API could return.
+  responseExpiryDate: daily,00:00:00
+  subDir: errors
+  ↓key [variables.RequestableHttpVariable-1640946661344]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640946661347]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640946764359]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640946764362]: 
+    httpName: pagesize

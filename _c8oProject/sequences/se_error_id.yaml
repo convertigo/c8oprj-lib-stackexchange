@@ -1,0 +1,41 @@
+comment: This method allows you to generate an error.
+↓jIf [steps.IfStep-1640947890060]: 
+  condition: id !== null && id.length>0
+  ↓Call_Transaction [steps.TransactionStep-1640947890063]: 
+    sourceTransaction: lib_StackExchange.network_errors.error_by_id
+    ↓filter [variables.StepVariable-1640947890066]: 
+      value: default
+    ↓id [variables.StepVariable-1640947890069]: 
+  ↓IfExistThenElse [steps.IfExistThenElseStep-1640947890078]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1640947890063
+          - java.lang.String: 
+            - ↑value: ./document/object/items
+    ↓jThen [steps.ThenStep-1640947890081]: 
+      ↓Copy [steps.XMLCopyStep-1640947890084]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640947890063
+              - java.lang.String: 
+                - ↑value: ./document/object
+    ↓jElse [steps.ElseStep-1640947890087]: 
+      ↓Copy1 [steps.XMLCopyStep-1640947890090]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1640947890063
+              - java.lang.String: 
+                - ↑value: ./document
+↓id [variables.RequestableVariable-1640947890096]: 
+↓Test_Case [core.TestCase]: 
+  ↓id [variables.TestCaseVariable-1640947890109]: 
+    value: 409

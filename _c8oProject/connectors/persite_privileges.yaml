@@ -1,0 +1,20 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓privileges [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get all the privileges available on the site.
+  subDir: privileges
+  ↓key [variables.RequestableHttpVariable-1640943034819]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640943034822]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1640943034825]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1640943107204]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640943107207]: 
+    httpName: pagesize

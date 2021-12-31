@@ -1,0 +1,44 @@
+comment: Returns the earnable privileges on a site.
+↓Call_Transaction [steps.TransactionStep-1640943711629]: 
+  sourceTransaction: lib_StackExchange.persite_privileges.privileges
+  ↓site [variables.StepVariable-1640943711632]: 
+    value: stackoverflow
+  ↓filter [variables.StepVariable-1640943711635]: 
+    value: default
+  ↓page [variables.StepVariable-1640944933800]: 
+  ↓pagesize [variables.StepVariable-1640944933802]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1640943711638]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640943711629
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1640943711641]: 
+    ↓Copy [steps.XMLCopyStep-1640943711644]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640943711629
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1640943711647]: 
+    ↓Copy1 [steps.XMLCopyStep-1640943711650]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640943711629
+            - java.lang.String: 
+              - ↑value: ./document
+↓site [variables.RequestableVariable-1640943711653]: 
+  value: stackoverflow
+↓filter [variables.RequestableVariable-1640943711656]: 
+  value: default
+↓page [variables.RequestableVariable-1640944944655]: 
+↓pagesize [variables.RequestableVariable-1640944944657]: 

@@ -1,0 +1,23 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓deauthenticate [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Allows an application to de-authorize itself for a set of users.
+  subDir: apps/{accessTokens}/de-authenticate
+  ↓key [variables.RequestableHttpVariable-1640946125220]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1640946125223]: 
+    httpName: filter
+    value: default
+  ↓page [variables.RequestableHttpVariable-1640946125226]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1640946125229]: 
+    httpName: pagesize
+  ↓accessTokens [variables.RequestableHttpVariable-1640946125232]: 
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xd8e180806a1c1d83a6255212121ab827
+    visibility: '-1'

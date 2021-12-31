@@ -1,17 +1,13 @@
 https: true
 port: 443
-server: api.stackexchange.com/2.3
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
 ↓collectives [transactions.JsonHttpTransaction]: 
   ↑default: true
   comment: Get all Collectives on the site, in alphabetical order.
   subDir: collectives
   ↓key [variables.RequestableHttpVariable-1640876245517]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640876245520]: 
     httpName: filter
     value: default
@@ -41,11 +37,7 @@ server: api.stackexchange.com/2.3
   subDir: collectives/{slugs}
   ↓key [variables.RequestableHttpVariable-1640876245554]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640876245557]: 
     httpName: filter
     value: default
@@ -71,7 +63,6 @@ server: api.stackexchange.com/2.3
     httpName: site
     value: stackoverflow
   ↓slugs [variables.RequestableHttpVariable-1640876245587]: 
-    httpName: slugs
 ↓collectives_slugs_answers [transactions.JsonHttpTransaction]: 
   comment: Get answers identified by a set of slugs.
   subDir: collectives/{slugs}/answers
@@ -80,11 +71,7 @@ server: api.stackexchange.com/2.3
     value: stackoverflow
   ↓key [variables.RequestableHttpVariable-1640877758408]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640877758411]: 
     httpName: filter
     value: default
@@ -107,7 +94,6 @@ server: api.stackexchange.com/2.3
     httpName: sort
     value: activity
   ↓slugs [variables.RequestableHttpVariable-1640877758438]: 
-    httpName: slugs
 ↓collectives_slugs_questions [transactions.JsonHttpTransaction]: 
   comment: Get questions identified by a set of slugs.
   subDir: collectives/{slugs}/questions
@@ -116,11 +102,7 @@ server: api.stackexchange.com/2.3
     value: stackoverflow
   ↓key [variables.RequestableHttpVariable-1640877306798]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640877306801]: 
     httpName: filter
     value: default
@@ -143,7 +125,6 @@ server: api.stackexchange.com/2.3
     httpName: sort
     value: activity
   ↓slugs [variables.RequestableHttpVariable-1640877306831]: 
-    httpName: slugs
 ↓collectives_slugs_tags [transactions.JsonHttpTransaction]: 
   comment: Get tags identified by a set of slugs.
   subDir: collectives/{slugs}/tags
@@ -152,11 +133,7 @@ server: api.stackexchange.com/2.3
     value: stackoverflow
   ↓key [variables.RequestableHttpVariable-1640878015188]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640878015191]: 
     httpName: filter
     value: default
@@ -179,7 +156,6 @@ server: api.stackexchange.com/2.3
     httpName: sort
     value: popular
   ↓slugs [variables.RequestableHttpVariable-1640878015218]: 
-    httpName: slugs
 ↓collectives_slugs_users [transactions.JsonHttpTransaction]: 
   comment: Get users identified by a set of slugs.
   subDir: collectives/{slugs}/users
@@ -188,11 +164,7 @@ server: api.stackexchange.com/2.3
     value: stackoverflow
   ↓key [variables.RequestableHttpVariable-1640878264221]: 
     httpName: key
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10c752ede1a2fb15c529917f3836957599
-    visibility: '-1'
+    value: ${lib_stackexchange.key}
   ↓filter [variables.RequestableHttpVariable-1640878264224]: 
     httpName: filter
     value: default
@@ -215,4 +187,3 @@ server: api.stackexchange.com/2.3
     httpName: sort
     value: reputation
   ↓slugs [variables.RequestableHttpVariable-1640878264251]: 
-    httpName: slugs
