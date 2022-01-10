@@ -1,0 +1,44 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓notifications [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get a user's notifications, outside of the context of a site. auth required
+  subDir: notifications
+  ↓key [variables.RequestableHttpVariable-1641477581559]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641477581562]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641477581565]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641477581568]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641477581571]: 
+    httpName: pagesize
+↓unread [transactions.JsonHttpTransaction]: 
+  comment: Get a user's unread notifications, outside of the context of a site. auth required
+  subDir: notifications/unread
+  ↓key [variables.RequestableHttpVariable-1641477581575]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641477581578]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641477581581]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641477581584]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641477581587]: 
+    httpName: pagesize

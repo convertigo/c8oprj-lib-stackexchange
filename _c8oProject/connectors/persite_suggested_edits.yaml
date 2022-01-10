@@ -1,0 +1,65 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓suggested_edits [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get all the suggested edits on the site.
+  subDir: suggested-edits
+  ↓key [variables.RequestableHttpVariable-1641199522999]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641199523002]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641199523005]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1641199523008]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641199523011]: 
+    httpName: pagesize
+  ↓fromdate [variables.RequestableHttpVariable-1641199523014]: 
+    httpName: fromdate
+  ↓todate [variables.RequestableHttpVariable-1641199523017]: 
+    httpName: todate
+  ↓order [variables.RequestableHttpVariable-1641199523020]: 
+    httpName: order
+    value: desc
+  ↓min [variables.RequestableHttpVariable-1641199523023]: 
+    httpName: min
+  ↓max [variables.RequestableHttpVariable-1641199523026]: 
+    httpName: max
+  ↓sort [variables.RequestableHttpVariable-1641199523029]: 
+    httpName: sort
+    value: creation
+↓suggested_edits_by_ids [transactions.JsonHttpTransaction]: 
+  comment: Get the suggested edits identified by a set of ids.
+  subDir: suggested-edits/{ids}
+  ↓key [variables.RequestableHttpVariable-1641199608063]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641199608066]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641199608069]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1641199608072]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641199608075]: 
+    httpName: pagesize
+  ↓fromdate [variables.RequestableHttpVariable-1641199608078]: 
+    httpName: fromdate
+  ↓todate [variables.RequestableHttpVariable-1641199608081]: 
+    httpName: todate
+  ↓order [variables.RequestableHttpVariable-1641199608084]: 
+    httpName: order
+    value: desc
+  ↓min [variables.RequestableHttpVariable-1641199608087]: 
+    httpName: min
+  ↓max [variables.RequestableHttpVariable-1641199608090]: 
+    httpName: max
+  ↓sort [variables.RequestableHttpVariable-1641199608093]: 
+    httpName: sort
+    value: creation
+  ↓ids [variables.RequestableHttpVariable-1641199630298]: 

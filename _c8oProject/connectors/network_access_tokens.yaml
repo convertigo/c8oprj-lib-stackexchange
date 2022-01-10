@@ -24,6 +24,13 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
 ↓access_tokens_invalidate [transactions.JsonHttpTransaction]: 
   comment: Allows an application to dispose of access_tokens when it is done with them.
   subDir: access-tokens/{accessTokens}/invalidate
+  ↓Test_Case [core.TestCase]: 
+    ↓accessTokens [variables.TestCaseVariable-1641398388264]: 
+      value: 
+        - ↑ciphered: true
+        - ↑traceable: false
+        - →→: x58486beeb66430f6a894aa2657affb29e0139728a2c85bce6f6063c41a556096
+      visibility: '-1'
   ↓key [variables.RequestableHttpVariable-1640855758447]: 
     httpName: key
     value: ${lib_stackexchange.key}

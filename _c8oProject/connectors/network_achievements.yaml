@@ -1,0 +1,45 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓by_id [transactions.JsonHttpTransaction]: 
+  comment: Returns a user's recent network-wide achievements, given their account id. auth required
+  subDir: users/{id}/achievements
+  ↓key [variables.RequestableHttpVariable-1641475721840]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641475721843]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641475721846]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641475721849]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641475721852]: 
+    httpName: pagesize
+  ↓id [variables.RequestableHttpVariable-1641475763879]: 
+↓me [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get a user's recent network-wide achievements. auth required
+  subDir: me/achievements
+  ↓key [variables.RequestableHttpVariable-1641475124107]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641475124110]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641475227946]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641475496655]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641475496658]: 
+    httpName: pagesize

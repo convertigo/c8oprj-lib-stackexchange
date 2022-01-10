@@ -3,9 +3,12 @@
   comment: Mashup Sequencer project
   version: 1.0
   ↓network_access_tokens [connectors.HttpConnector]: 🗏 connectors/network_access_tokens.yaml
+  ↓network_achievements [connectors.HttpConnector]: 🗏 connectors/network_achievements.yaml
   ↓network_applications [connectors.HttpConnector]: 🗏 connectors/network_applications.yaml
   ↓network_errors [connectors.HttpConnector]: 🗏 connectors/network_errors.yaml
   ↓network_filters [connectors.HttpConnector]: 🗏 connectors/network_filters.yaml
+  ↓network_inbox [connectors.HttpConnector]: 🗏 connectors/network_inbox.yaml
+  ↓network_notifications [connectors.HttpConnector]: 🗏 connectors/network_notifications.yaml
   ↓network_sites [connectors.HttpConnector]: 🗏 connectors/network_sites.yaml
   ↓network_users [connectors.HttpConnector]: 🗏 connectors/network_users.yaml
   ↓persite_answers [connectors.HttpConnector]: 🗏 connectors/persite_answers.yaml
@@ -16,8 +19,11 @@
   ↓persite_info [connectors.HttpConnector]: 🗏 connectors/persite_info.yaml
   ↓persite_posts [connectors.HttpConnector]: 🗏 connectors/persite_posts.yaml
   ↓persite_privileges [connectors.HttpConnector]: 🗏 connectors/persite_privileges.yaml
+  ↓persite_questions [connectors.HttpConnector]: 🗏 connectors/persite_questions.yaml
   ↓persite_revisions [connectors.HttpConnector]: 🗏 connectors/persite_revisions.yaml
   ↓persite_search [connectors.HttpConnector]: 🗏 connectors/persite_search.yaml
+  ↓persite_suggested_edits [connectors.HttpConnector]: 🗏 connectors/persite_suggested_edits.yaml
+  ↓persite_users [connectors.HttpConnector]: 🗏 connectors/persite_users.yaml
   ↓stackoverflow [connectors.HttpConnector]: 🗏 connectors/stackoverflow.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓checkAccessToken [sequences.GenericSequence]: 🗏 sequences/checkAccessToken.yaml
@@ -25,6 +31,8 @@
   ↓loginStackExchange [sequences.GenericSequence]: 🗏 sequences/loginStackExchange.yaml
   ↓se_access_tokens [sequences.GenericSequence]: 🗏 sequences/se_access_tokens.yaml
   ↓se_access_tokens_invalidate [sequences.GenericSequence]: 🗏 sequences/se_access_tokens_invalidate.yaml
+  ↓se_achievements_by_id [sequences.GenericSequence]: 🗏 sequences/se_achievements_by_id.yaml
+  ↓se_achievements_me [sequences.GenericSequence]: 🗏 sequences/se_achievements_me.yaml
   ↓se_answers [sequences.GenericSequence]: 🗏 sequences/se_answers.yaml
   ↓se_answers_by_ids [sequences.GenericSequence]: 🗏 sequences/se_answers_by_ids.yaml
   ↓se_answers_comments [sequences.GenericSequence]: 🗏 sequences/se_answers_comments.yaml
@@ -51,6 +59,8 @@
   ↓se_errors [sequences.GenericSequence]: 🗏 sequences/se_errors.yaml
   ↓se_filters [sequences.GenericSequence]: 🗏 sequences/se_filters.yaml
   ↓se_filters_create [sequences.GenericSequence]: 🗏 sequences/se_filters_create.yaml
+  ↓se_inbox [sequences.GenericSequence]: 🗏 sequences/se_inbox.yaml
+  ↓se_inbox_unread [sequences.GenericSequence]: 🗏 sequences/se_inbox_unread.yaml
   ↓se_info [sequences.GenericSequence]: 🗏 sequences/se_info.yaml
   ↓se_me [sequences.GenericSequence]: 🗏 sequences/se_me.yaml
   ↓se_posts [sequences.GenericSequence]: 🗏 sequences/se_posts.yaml
@@ -60,12 +70,16 @@
   ↓se_posts_revisions_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_revisions_ids.yaml
   ↓se_posts_suggested_edits_ids [sequences.GenericSequence]: 🗏 sequences/se_posts_suggested_edits_ids.yaml
   ↓se_privileges [sequences.GenericSequence]: 🗏 sequences/se_privileges.yaml
+  ↓se_questions [sequences.GenericSequence]: 🗏 sequences/se_questions.yaml
+  ↓se_questions_ids [sequences.GenericSequence]: 🗏 sequences/se_questions_ids.yaml
   ↓se_revisions [sequences.GenericSequence]: 🗏 sequences/se_revisions.yaml
   ↓se_search [sequences.GenericSequence]: 🗏 sequences/se_search.yaml
   ↓se_search_advanced [sequences.GenericSequence]: 🗏 sequences/se_search_advanced.yaml
   ↓se_search_excerpts [sequences.GenericSequence]: 🗏 sequences/se_search_excerpts.yaml
   ↓se_similar [sequences.GenericSequence]: 🗏 sequences/se_similar.yaml
   ↓se_sites [sequences.GenericSequence]: 🗏 sequences/se_sites.yaml
+  ↓se_suggested_edits [sequences.GenericSequence]: 🗏 sequences/se_suggested_edits.yaml
+  ↓se_suggested_edits_ids [sequences.GenericSequence]: 🗏 sequences/se_suggested_edits_ids.yaml
   ↓signOut [sequences.GenericSequence]: 🗏 sequences/signOut.yaml
   ↓Project_reference [references.ProjectSchemaReference]: 
     projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip

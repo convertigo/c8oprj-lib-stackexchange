@@ -1,6 +1,7 @@
 comment: Checks if a valid access token is held by the current users' session.
 ↓GetTokenFromUserSession [steps.SessionGetStep-1640689144578]: 
   key: oAuthAccessToken
+  output: false
 ↓IfExistThenElse [steps.IfExistStep-1640689144581]: 
   sourceDefinition: 
     - xmlizable: 

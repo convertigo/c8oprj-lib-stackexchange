@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_StackExchange_ns="http://www.convertigo.com/convertigo/projects/lib_StackExchange" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_StackExchange">
+    <xsd:element name="network_notifications__notifications" type="lib_StackExchange_ns:network_notifications__notificationsRequestData">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[Get a user's notifications, outside of the context of a site. auth required
+]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="network_notifications__notificationsResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="lib_StackExchange_ns:network_notifications__notificationsResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="network_notifications__notificationsResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="lib_StackExchange_ns:network_notifications__notificationsResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications__notificationsRequestData">
+        <xsd:sequence>
+            <xsd:element name="key" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="filter" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="access_token" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="page" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="pagesize" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_has_moreType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_bodyType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_creation_dateType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_is_unreadType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_notification_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_aliases_valueType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_aliasesType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="value" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_aliases_valueType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_api_site_parameterType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_audienceType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_favicon_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_high_resolution_icon_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_icon_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_launch_dateType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_logo_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_markdown_extensions_valueType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_markdown_extensionsType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="value" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_markdown_extensions_valueType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_nameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_open_beta_dateType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sites_object_api_site_parameterType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sites_object_nameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sites_object_relationType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sites_object_site_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sites_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="api_site_parameter" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sites_object_api_site_parameterType"/>
+            <xsd:element minOccurs="0" name="name" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sites_object_nameType"/>
+            <xsd:element minOccurs="0" name="relation" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sites_object_relationType"/>
+            <xsd:element minOccurs="0" name="site_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sites_object_site_urlType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_related_sitesType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="object" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sites_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_site_stateType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_site_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_site_urlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_styling_link_colorType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_styling_tag_background_colorType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_styling_tag_foreground_colorType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_site_stylingType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="link_color" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_styling_link_colorType"/>
+            <xsd:element minOccurs="0" name="tag_background_color" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_styling_tag_background_colorType"/>
+            <xsd:element minOccurs="0" name="tag_foreground_color" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_styling_tag_foreground_colorType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_siteType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="aliases" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_aliasesType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="api_site_parameter" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_api_site_parameterType"/>
+            <xsd:element minOccurs="0" name="audience" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_audienceType"/>
+            <xsd:element minOccurs="0" name="favicon_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_favicon_urlType"/>
+            <xsd:element minOccurs="0" name="high_resolution_icon_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_high_resolution_icon_urlType"/>
+            <xsd:element minOccurs="0" name="icon_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_icon_urlType"/>
+            <xsd:element minOccurs="0" name="launch_date" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_launch_dateType"/>
+            <xsd:element minOccurs="0" name="logo_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_logo_urlType"/>
+            <xsd:element minOccurs="0" name="markdown_extensions" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_markdown_extensionsType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="name" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_nameType"/>
+            <xsd:element minOccurs="0" name="open_beta_date" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_open_beta_dateType"/>
+            <xsd:element minOccurs="0" name="related_sites" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_related_sitesType"/>
+            <xsd:element minOccurs="0" name="site_state" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_site_stateType"/>
+            <xsd:element minOccurs="0" name="site_type" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_site_typeType"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="site_url" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_site_urlType"/>
+            <xsd:element minOccurs="0" name="styling" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_site_stylingType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_object_post_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_items_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="body" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_bodyType"/>
+            <xsd:element minOccurs="0" name="creation_date" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_creation_dateType"/>
+            <xsd:element minOccurs="0" name="is_unread" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_is_unreadType"/>
+            <xsd:element minOccurs="0" name="notification_type" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_notification_typeType"/>
+            <xsd:element minOccurs="0" name="site" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_siteType"/>
+            <xsd:element minOccurs="0" name="post_id" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_object_post_idType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_itemsType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="object" type="lib_StackExchange_ns:network_notifications_notifications_document_object_items_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_quota_maxType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_object_quota_remainingType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications_notifications_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="has_more" type="lib_StackExchange_ns:network_notifications_notifications_document_object_has_moreType"/>
+            <xsd:element minOccurs="0" name="items" type="lib_StackExchange_ns:network_notifications_notifications_document_object_itemsType"/>
+            <xsd:element minOccurs="0" name="quota_max" type="lib_StackExchange_ns:network_notifications_notifications_document_object_quota_maxType"/>
+            <xsd:element minOccurs="0" name="quota_remaining" type="lib_StackExchange_ns:network_notifications_notifications_document_object_quota_remainingType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="network_notifications__notificationsResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_StackExchange_ns:network_notifications_notifications_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_StackExchange_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_StackExchange_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="lib_StackExchange_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

@@ -4,38 +4,235 @@ title: Title for Page
 ↓Content [mobile.components.UIDynamicElement-1640688726205]: 
   beanData: '{"ionBean":"Content"}'
   tagName: ion-content
-↓PageEvent [mobile.components.UIPageEvent-1640688743221]: 
-  ↓CallSequence [mobile.components.UIDynamicAction-1640702982312]: 
-    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_StackExchange.getParameters"}'
-    ↓checkResponse [mobile.components.UICustomAction-1640703035962]: 
-      actionValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
-          - com.twinsoft.convertigo.beans.common.FormatedContent: 
-            →: |
-              '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
-              		const r = vars.response;
-              		if("parameters" in r && "client_id" in r["parameters"] && "scope" in r["parameters"] && "redirect_uri" in r["parameters"]){
-              			r["parameters"]["redirect_uri"] = "https://"+r["parameters"]["redirect_uri"]+"/convertigo/projects/lib_OAuth/getTokenGoogle.html"
-              			//page.c8o.log.warn(''response:'' + JSON.stringify(vars.response));
-              			resolve(r);
-              		}
-              '
-      ↓OAuthLogin [mobile.components.UIDynamicAction-1640688756621]: 
+  ↓ListContainer [mobile.components.UIDynamicElement-1641398044167]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓ListItem_getToken [mobile.components.UIDynamicElement-1641398048672]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Button [mobile.components.UIDynamicElement-1641397856250]: 
+        beanData: '{"ionBean":"Button","IonShape":"plain:block"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1641397863828]: 
+          i18n: false
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:get access token
+        ↓Event [mobile.components.UIControlEvent-1641398002962]: 
+          ↓CallSequence [mobile.components.UIDynamicAction-1640702982312]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_StackExchange.getParameters"}'
+            ↓checkResponse [mobile.components.UICustomAction-1640703035962]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		const r = vars.response;
+                      		if("parameters" in r && "client_id" in r["parameters"] && "scope" in r["parameters"] && "redirect_uri" in r["parameters"]){
+                      			r["parameters"]["redirect_uri"] = "https://"+r["parameters"]["redirect_uri"]+"/convertigo/projects/lib_OAuth/getTokenGoogle.html"
+                      			//page.c8o.log.warn(''response:'' + JSON.stringify(vars.response));
+                      			resolve(r);
+                      		}
+                      '
+              ↓OAuthLogin [mobile.components.UIDynamicAction-1640688756621]: 
+                beanData: |
+                  '{
+                   "ionBean": "OAuthLoginAction",
+                   "provider": "plain:openid",
+                   "clientid": "script:out[\"parameters\"][\"client_id\"]",
+                   "scope": "script:out[\"parameters\"][\"scope\"]",
+                   "response_type": "plain:code",
+                   "loginRequestable": "plain:lib_StackExchange.loginStackExchange",
+                   "checkAccessTokenRequestable": "plain:lib_StackExchange.checkAccessToken",
+                   "authorization_endpoint": "plain:https:\/\/stackoverflow.com\/oauth",
+                   "callbackurl": "script:out[\"parameters\"][\"redirect_uri\"]"
+                  }'
+                ↓CallSequence [mobile.components.UIDynamicAction-1641395156566]: 
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_StackExchange.checkAccessToken"}'
+              ↓response [mobile.components.UIControlVariable-1640703519713]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:out
+    ↓ListItem_displayToken [mobile.components.UIDynamicElement-1641398535373]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Label [mobile.components.UIDynamicElement-1641398584047]: 
+        beanData: '{"ionBean":"Label"}'
+        tagName: ion-label
+        ↓Text [mobile.components.UIText-1641398587693]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:access_token
+      ↓TextInput [mobile.components.UIDynamicElement-1641395219852]: 
         beanData: |
           '{
-           "ionBean": "OAuthLoginAction",
-           "provider": "plain:openid",
-           "clientid": "script:out[\"parameters\"][\"client_id\"]",
-           "scope": "script:out[\"parameters\"][\"scope\"]",
-           "response_type": "plain:code",
-           "loginRequestable": "plain:lib_StackExchange.loginStackExchange",
-           "checkAccessTokenRequestable": "plain:lib_StackExchange.checkAccessToken",
-           "authorization_endpoint": "plain:https:\/\/stackoverflow.com\/oauth",
-           "callbackurl": "script:out[\"parameters\"][\"redirect_uri\"]"
+           "ionBean": "Input",
+           "Readonly": "plain:true",
+           "Value": "source:{\"filter\":\"Sequence\",\"project\":\"lib_StackExchange\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"lib_StackExchange.checkAccessToken\",\"marker\":\"\"}],\"path\":\"?.token\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
           }'
-      ↓response [mobile.components.UIControlVariable-1640703519713]: 
-        varValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-            - MobileSmartSourceType: script:out
+        identifier: accessToken
+        tagName: ion-input
+      ↓Button [mobile.components.UIDynamicElement-1641403723543]: 
+        beanData: |
+          '{
+           "ionBean": "Button",
+           "IonClear": "plain:clear",
+           "IconOnly": "plain:icon-only"
+          }'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1641403734843]: 
+          beanData: |
+            '{
+             "ionBean": "Icon",
+             "IconName": "plain:copy",
+             "IonColor": "script:this.local.isCopied ? ''secondary'' : ''primary''"
+            }'
+          tagName: ion-icon
+        ↓Attr [mobile.components.UIAttribute-1641403803308]: 
+          attrName: 
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:item-end
+        ↓Event [mobile.components.UIControlEvent-1641404436297]: 
+          ↓copy_to_clipboard [mobile.components.UICustomAction-1641404447941]: 
+            actionValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                    		if(page["accessToken"].value != ""){
+                    			navigator["clipboard"].writeText(page["accessToken"].value)
+                    			.then(() => {
+                    				page.local.isCopied = true;
+                    			}, () => {
+                    				page.local.isCopied = false;
+                    			})
+                    			
+                    		}
+                    		resolve();
+                    '
+    ↓ListItem_invalidateToken [mobile.components.UIDynamicElement-1641398082631]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Button [mobile.components.UIDynamicElement-1641398082634]: 
+        beanData: '{"ionBean":"Button","IonShape":"plain:block"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1641398082637]: 
+          i18n: false
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:invalidate access token
+        ↓Event [mobile.components.UIControlEvent-1641398082640]: 
+          ↓CallSequence [mobile.components.UIDynamicAction-1641398125448]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_StackExchange.se_access_tokens_invalidate"}'
+            ↓access_tokens [mobile.components.UIControlVariable-1641398129258]: 
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_StackExchange","input":"","model":{"data":[{"sequence":"lib_StackExchange.checkAccessToken","marker":""}],"path":"?.token","prefix":"","suffix":"","custom":"","useCustom":false}}
+            ↓ClearDataSource [mobile.components.UIDynamicAction-1641403074464]: 
+              beanData: '{"ionBean":"ClearDataSourceAction","requestables":"source:{\"filter\":\"Sequence\",\"project\":\"lib_StackExchange\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"lib_StackExchange.checkAccessToken\",\"marker\":\"\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+            ↓remove_from_clipboard [mobile.components.UICustomAction-1641474526499]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		if(page["accessToken"].value != ""){
+                      			navigator["clipboard"].writeText("")
+                      			.then(() => {
+                      				page.local.isCopied = false;
+                      			}, () => {
+                      				page.local.isCopied = false;
+                      			})
+                      			
+                      		}
+                      		resolve();
+                      '
+    ↓ListItem_doc_token [mobile.components.UIDynamicElement-1641399164461]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Heading [mobile.components.UIDynamicTag-1641399272178]: 
+        beanData: '{"ionBean":"Heading"}'
+        tagName: h1
+        ↓Text [mobile.components.UIText-1641399283045]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:How to get the 'access_token' token?
+      ↓Paragraph [mobile.components.UIDynamicElement-1641399247858]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641399187719]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Click the "GET ACCESS TOKEN" button.
+      ↓Paragraph2 [mobile.components.UIDynamicElement-1641400382997]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641400383000]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:This will create a permanent (no_expiry) 'access_token' token.
+      ↓Paragraph1 [mobile.components.UIDynamicElement-1641399259632]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641399259635]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Copy the response value of the "access_token" input.
+      ↓Paragraph11 [mobile.components.UIDynamicElement-1641399448165]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641399448168]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Edit/Create the "lib_stackexchange.access_token.secret" symbol in Convertigo Administration Console and paste the value.
+    ↓ListItem_doc_token1 [mobile.components.UIDynamicElement-1641401872171]: 
+      beanData: '{"ionBean":"ListItem"}'
+      tagName: ion-item
+      ↓Heading [mobile.components.UIDynamicTag-1641401872204]: 
+        beanData: '{"ionBean":"Heading"}'
+        tagName: h1
+        ↓Text [mobile.components.UIText-1641401872207]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:How to generate a new 'access_token' token?
+      ↓Paragraph [mobile.components.UIDynamicElement-1641401872180]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641401872183]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Click the "INVALIDATE ACCESS TOKEN" button.
+      ↓Paragraph2 [mobile.components.UIDynamicElement-1641402033178]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641402033181]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:This will remove the 'access_token' token.
+      ↓Paragraph3 [mobile.components.UIDynamicElement-1641402004385]: 
+        beanData: '{"ionBean":"Paragraph"}'
+        tagName: p
+        ↓Text [mobile.components.UIText-1641402004388]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Click the "GET ACCESS TOKEN" button.
+↓PageEvent [mobile.components.UIPageEvent-1640688743221]: 

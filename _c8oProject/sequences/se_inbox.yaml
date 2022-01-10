@@ -1,0 +1,40 @@
+comment: Returns the user associated with the passed access_token.
+↓Call_Transaction [steps.TransactionStep-1641477346167]: 
+  sourceTransaction: lib_StackExchange.network_inbox.inbox
+  ↓filter [variables.StepVariable-1641477392878]: 
+    value: default
+  ↓page [variables.StepVariable-1641477392882]: 
+  ↓pagesize [variables.StepVariable-1641477392884]: 
+↓IfExistThenElse [steps.IfExistThenElseStep-1641477346179]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1641477346167
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1641477346182]: 
+    ↓Copy [steps.XMLCopyStep-1641477346185]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1641477346167
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1641477346188]: 
+    ↓Copy1 [steps.XMLCopyStep-1641477346191]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1641477346167
+            - java.lang.String: 
+              - ↑value: ./document
+↓filter [variables.RequestableVariable-1641477405364]: 
+  value: default
+↓page [variables.RequestableVariable-1641477405366]: 
+↓pagesize [variables.RequestableVariable-1641477405368]: 

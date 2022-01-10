@@ -1,0 +1,41 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓me [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Returns the user associated with the passed access_token.
+  subDir: me
+  ↓key [variables.RequestableHttpVariable-1641395709302]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641395709305]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641395709308]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1641395808936]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641395808939]: 
+    httpName: pagesize
+  ↓fromdate [variables.RequestableHttpVariable-1641395808942]: 
+    httpName: fromdate
+  ↓todate [variables.RequestableHttpVariable-1641395808945]: 
+    httpName: todate
+  ↓order [variables.RequestableHttpVariable-1641395808948]: 
+    httpName: order
+    value: desc
+  ↓min [variables.RequestableHttpVariable-1641395808951]: 
+    httpName: min
+  ↓max [variables.RequestableHttpVariable-1641395808954]: 
+    httpName: max
+  ↓sort [variables.RequestableHttpVariable-1641395808957]: 
+    httpName: sort
+    value: reputation
+  ↓access_token [variables.RequestableHttpVariable-1641395830613]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'

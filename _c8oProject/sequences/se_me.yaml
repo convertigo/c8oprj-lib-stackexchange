@@ -1,22 +1,60 @@
 comment: Returns the user associated with the passed access_token.
-↓Call_Sequence [steps.SequenceStep-1640714711842]: 
-  sourceSequence: lib_StackExchange.checkAccessToken
 ↓Call_Transaction [steps.TransactionStep-1640713989752]: 
-  output: true
-  sourceTransaction: lib_StackExchange.persite_info.info
-  ↓access_token [variables.StepVariable-1640713989754]: 
-    sourceDefinition: 
-      - xmlizable: 
-        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-        - com.twinsoft.convertigo.beans.common.XMLVector: 
-          - java.lang.String: 
-            - ↑value: 1640714711842
-          - java.lang.String: 
-            - ↑value: ./document/token/text()
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xd8e180806a1c1d83a6255212121ab827
-    visibility: '-1'
-  ↓site [variables.StepVariable-1640714115520]: 
+  sourceTransaction: lib_StackExchange.persite_users.me
+  ↓filter [variables.StepVariable-1641395951700]: 
+    value: default
+  ↓site [variables.StepVariable-1641395951702]: 
     value: stackoverflow
+  ↓page [variables.StepVariable-1641395951704]: 
+  ↓pagesize [variables.StepVariable-1641395951706]: 
+  ↓fromdate [variables.StepVariable-1641395951708]: 
+  ↓todate [variables.StepVariable-1641395951710]: 
+  ↓order [variables.StepVariable-1641395951712]: 
+    value: desc
+  ↓min [variables.StepVariable-1641395951714]: 
+  ↓max [variables.StepVariable-1641395951716]: 
+  ↓sort [variables.StepVariable-1641395951718]: 
+    value: reputation
+↓IfExistThenElse [steps.IfExistThenElseStep-1641396075294]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1640713989752
+        - java.lang.String: 
+          - ↑value: ./document/object/items
+  ↓jThen [steps.ThenStep-1641396075297]: 
+    ↓Copy [steps.XMLCopyStep-1641396075300]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640713989752
+            - java.lang.String: 
+              - ↑value: ./document/object
+  ↓jElse [steps.ElseStep-1641396075303]: 
+    ↓Copy1 [steps.XMLCopyStep-1641396075306]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1640713989752
+            - java.lang.String: 
+              - ↑value: ./document
+↓filter [variables.RequestableVariable-1641475941926]: 
+  value: default
+↓site [variables.RequestableVariable-1641475941928]: 
+  value: stackoverflow
+↓page [variables.RequestableVariable-1641475941930]: 
+↓pagesize [variables.RequestableVariable-1641475941932]: 
+↓fromdate [variables.RequestableVariable-1641475941934]: 
+↓todate [variables.RequestableVariable-1641475941936]: 
+↓order [variables.RequestableVariable-1641475941938]: 
+  value: desc
+↓min [variables.RequestableVariable-1641475941940]: 
+↓max [variables.RequestableVariable-1641475941942]: 
+↓sort [variables.RequestableVariable-1641475941944]: 
+  value: reputation

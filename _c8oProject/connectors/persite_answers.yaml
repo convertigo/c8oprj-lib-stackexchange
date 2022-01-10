@@ -32,6 +32,66 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
   ↓site [variables.RequestableHttpVariable-1640787358189]: 
     httpName: site
     value: stackoverflow
+↓answers_accept_id [transactions.JsonHttpTransaction]: 
+  comment: Casts an accept vote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/accept
+  ↓key [variables.RequestableHttpVariable-1641836379048]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836379051]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836379054]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836379057]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836379060]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836379063]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_accept_undo_id [transactions.JsonHttpTransaction]: 
+  comment: Undoes an accept vote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/accept/undo
+  ↓key [variables.RequestableHttpVariable-1641836517846]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836517849]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836517852]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836517855]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836517858]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836517861]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
 ↓answers_by_ids [transactions.JsonHttpTransaction]: 
   comment: Get answers identified by a set of ids.
   subDir: answers/{ids}
@@ -94,7 +154,197 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpName: site
     value: stackoverflow
   ↓ids [variables.RequestableHttpVariable-1640853615336]: 
-↓answers_questions [transactions.JsonHttpTransaction]: 
+↓answers_delete_id [transactions.JsonHttpTransaction]: 
+  comment: Deletes the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/delete
+  ↓key [variables.RequestableHttpVariable-1641836576979]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836576982]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836576985]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836576988]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836576991]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836576994]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_downvote_id [transactions.JsonHttpTransaction]: 
+  comment: Casts a downvote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/downvote
+  ↓key [variables.RequestableHttpVariable-1641836645165]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836645168]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836645171]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836645174]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836645177]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836645180]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_downvote_undo_id [transactions.JsonHttpTransaction]: 
+  comment: Undoes a downvote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/downvote/undo
+  ↓key [variables.RequestableHttpVariable-1641836645184]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836645187]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836645190]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836645193]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836645196]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836645199]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_edit_id [transactions.JsonHttpTransaction]: 
+  comment: Edits the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/edit
+  ↓key [variables.RequestableHttpVariable-1641836839589]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836839592]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836839595]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836839598]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836839601]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836839604]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+  ↓title [variables.RequestableHttpVariable-1641836839607]: 
+    httpMethod: POST
+    httpName: title
+  ↓body [variables.RequestableHttpVariable-1641836839610]: 
+    httpMethod: POST
+    httpName: body
+  ↓tags [variables.RequestableHttpVariable-1641836839613]: 
+    httpMethod: POST
+    httpName: tags
+  ↓comment [variables.RequestableHttpVariable-1641836839616]: 
+    httpMethod: POST
+    httpName: comment
+↓answers_flags_add_id [transactions.JsonHttpTransaction]: 
+  comment: Casts a flag on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/flags/add
+  ↓key [variables.RequestableHttpVariable-1641836839620]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836839623]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836839626]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641836839629]: 
+    httpMethod: POST
+  ↓option_id [variables.RequestableHttpVariable-1641836839632]: 
+    httpMethod: POST
+    httpName: option_id
+  ↓comment [variables.RequestableHttpVariable-1641836839635]: 
+    httpMethod: POST
+    httpName: comment
+  ↓target_site [variables.RequestableHttpVariable-1641836839638]: 
+    httpMethod: POST
+    httpName: target_site
+  ↓question_id [variables.RequestableHttpVariable-1641836839641]: 
+    httpMethod: POST
+    httpName: question_id
+  ↓preview [variables.RequestableHttpVariable-1641836839644]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_flags_options_id [transactions.JsonHttpTransaction]: 
+  comment: Returns valid flag options for the given answer. auth required
+  subDir: answers/{id}/flags/options
+  ↓key [variables.RequestableHttpVariable-1641836839648]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836839651]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836839654]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836839657]: 
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836839660]: 
+↓answers_questions_ids [transactions.JsonHttpTransaction]: 
   comment: Gets all questions the answers identified by ids are on.
   subDir: answers/{ids}/questions
   ↓key [variables.RequestableHttpVariable-1640854205231]: 
@@ -125,3 +375,167 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpName: site
     value: stackoverflow
   ↓ids [variables.RequestableHttpVariable-1640854205264]: 
+↓answers_recommend_id [transactions.JsonHttpTransaction]: 
+  comment: Casts a recommendation on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/recommend
+  ↓key [variables.RequestableHttpVariable-1641837008763]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641837008766]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641837008769]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641837008772]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641837008775]: 
+    httpMethod: POST
+  ↓slug [variables.RequestableHttpVariable-1641837058504]: 
+    httpMethod: POST
+    httpName: slug
+  ↓preview [variables.RequestableHttpVariable-1641837008778]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_recommend_undo_id [transactions.JsonHttpTransaction]: 
+  comment: Undoes an recommendation on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/recommend/undo
+  ↓key [variables.RequestableHttpVariable-1641837008782]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641837008785]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641837008788]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641837008791]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641837008794]: 
+    httpMethod: POST
+  ↓slug [variables.RequestableHttpVariable-1641837140421]: 
+    httpMethod: POST
+    httpName: slug
+  ↓preview [variables.RequestableHttpVariable-1641837008797]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_suggested_edit_add_id [transactions.JsonHttpTransaction]: 
+  comment: Creates a suggested edit on an existing answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/suggested-edit/add
+  ↓key [variables.RequestableHttpVariable-1641836974995]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836974998]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836975001]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641836975004]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836975007]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+  ↓title [variables.RequestableHttpVariable-1641836975010]: 
+    httpMethod: POST
+    httpName: title
+  ↓body [variables.RequestableHttpVariable-1641836975013]: 
+    httpMethod: POST
+    httpName: body
+  ↓tags [variables.RequestableHttpVariable-1641836975016]: 
+    httpMethod: POST
+    httpName: tags
+  ↓comment [variables.RequestableHttpVariable-1641836975019]: 
+    httpMethod: POST
+    httpName: comment
+↓answers_upvote_id [transactions.JsonHttpTransaction]: 
+  comment: Casts an upvote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/upvote
+  ↓key [variables.RequestableHttpVariable-1641836645203]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836645206]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836645209]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836645212]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836645215]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836645218]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓answers_upvote_undo_id [transactions.JsonHttpTransaction]: 
+  comment: Undoes an upvote on the given answer. auth required
+  httpVerb: POST
+  subDir: answers/{id}/upvote/undo
+  ↓key [variables.RequestableHttpVariable-1641836645222]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641836645225]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641836645228]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641836645231]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641836645234]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641836645237]: 
+    httpMethod: POST
+    httpName: preview
+    value: true

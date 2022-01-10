@@ -1,0 +1,46 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓inbox [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get a user's inbox, outside of the context of a site. auth required
+  subDir: inbox
+  ↓key [variables.RequestableHttpVariable-1641476879451]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641476879454]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641476879457]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641476879460]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641476879463]: 
+    httpName: pagesize
+↓unread [transactions.JsonHttpTransaction]: 
+  comment: Get the unread items in a user's inbox, outside of the context of a site. auth required
+  subDir: inbox/unread
+  ↓key [variables.RequestableHttpVariable-1641476879432]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641476879435]: 
+    httpName: filter
+    value: default
+  ↓access_token [variables.RequestableHttpVariable-1641476879438]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓page [variables.RequestableHttpVariable-1641476879441]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641476879444]: 
+    httpName: pagesize
+  ↓since [variables.RequestableHttpVariable-1641477073160]: 
+    httpName: since
