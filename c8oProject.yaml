@@ -16,6 +16,7 @@
   ↓persite_badges [connectors.HttpConnector]: 🗏 connectors/persite_badges.yaml
   ↓persite_collectives [connectors.HttpConnector]: 🗏 connectors/persite_collectives.yaml
   ↓persite_comments [connectors.HttpConnector]: 🗏 connectors/persite_comments.yaml
+  ↓persite_events [connectors.HttpConnector]: 🗏 connectors/persite_events.yaml
   ↓persite_info [connectors.HttpConnector]: 🗏 connectors/persite_info.yaml
   ↓persite_posts [connectors.HttpConnector]: 🗏 connectors/persite_posts.yaml
   ↓persite_privileges [connectors.HttpConnector]: 🗏 connectors/persite_privileges.yaml

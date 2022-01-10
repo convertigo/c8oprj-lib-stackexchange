@@ -34,6 +34,42 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
   ↓site [variables.RequestableHttpVariable-1640856443571]: 
     httpName: site
     value: stackoverflow
+↓articles_add [transactions.JsonHttpTransaction]: 
+  comment: Creates a new article. auth required
+  httpVerb: POST
+  subDir: articles/add
+  ↓key [variables.RequestableHttpVariable-1641838484677]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641838484680]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641838484683]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641838484686]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓title [variables.RequestableHttpVariable-1641838525535]: 
+    httpMethod: POST
+    httpName: title
+  ↓body [variables.RequestableHttpVariable-1641838525538]: 
+    httpMethod: POST
+    httpName: body
+  ↓tags [variables.RequestableHttpVariable-1641838525541]: 
+    httpMethod: POST
+    httpName: tags
+  ↓article_type [variables.RequestableHttpVariable-1641838534591]: 
+    httpMethod: POST
+    httpName: article_type
 ↓articles_by_ids [transactions.JsonHttpTransaction]: 
   comment: Get the articles identified by a set of ids.
   subDir: articles/{ids}
@@ -65,6 +101,70 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpName: site
     value: stackoverflow
   ↓ids [variables.RequestableHttpVariable-1640859816018]: 
+↓articles_delete_id [transactions.JsonHttpTransaction]: 
+  comment: Deletes the given article. auth required
+  httpVerb: POST
+  subDir: articles/{id}/delete
+  ↓key [variables.RequestableHttpVariable-1641838255084]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641838255087]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641838255090]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641838255093]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641838255096]: 
+    httpMethod: POST
+↓articles_edit_id [transactions.JsonHttpTransaction]: 
+  comment: Edits the given article. auth required
+  httpVerb: POST
+  subDir: articles/{id}/edit
+  ↓key [variables.RequestableHttpVariable-1641838304450]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641838304453]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641838304456]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641838304459]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641838304462]: 
+    httpMethod: POST
+  ↓title [variables.RequestableHttpVariable-1641838304468]: 
+    httpMethod: POST
+    httpName: title
+  ↓body [variables.RequestableHttpVariable-1641838304471]: 
+    httpMethod: POST
+    httpName: body
+  ↓tags [variables.RequestableHttpVariable-1641838304474]: 
+    httpMethod: POST
+    httpName: tags
+  ↓article_type [variables.RequestableHttpVariable-1641838405459]: 
+    httpMethod: POST
+    httpName: article_type
 ↓articles_linked_ids [transactions.JsonHttpTransaction]: 
   comment: Get the questions that are linked to the articles identified by a set of ids.
   subDir: articles/{ids}/linked

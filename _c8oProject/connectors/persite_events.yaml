@@ -1,0 +1,29 @@
+https: true
+port: 443
+server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
+↓events [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  comment: Get all comments on the site.
+  subDir: events
+  ↓key [variables.RequestableHttpVariable-1641839104248]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641839181046]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641839104251]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641839104254]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1641839104257]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641839104260]: 
+    httpName: pagesize
+  ↓since [variables.RequestableHttpVariable-1641839161335]: 
+    httpName: since
