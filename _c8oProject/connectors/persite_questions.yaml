@@ -149,6 +149,25 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
 ↓questions_by_ids [transactions.JsonHttpTransaction]: 
   comment: Get the questions identified by a set of ids.
   subDir: questions/{ids}
+  ↓Test_Case [core.TestCase]: 
+    ↓key [variables.TestCaseVariable-1641895069800]: 
+      value: wc*zLMga8qgTXEidUCBeFw((
+    ↓filter [variables.TestCaseVariable-1641895069802]: 
+      value: '!nKzQUR3Egv'
+    ↓site [variables.TestCaseVariable-1641895069804]: 
+      value: stackoverflow
+    ↓page [variables.TestCaseVariable-1641895069806]: 
+    ↓pagesize [variables.TestCaseVariable-1641895069808]: 
+    ↓fromdate [variables.TestCaseVariable-1641895069810]: 
+    ↓todate [variables.TestCaseVariable-1641895069812]: 
+    ↓order [variables.TestCaseVariable-1641895069814]: 
+      value: desc
+    ↓min [variables.TestCaseVariable-1641895069816]: 
+    ↓max [variables.TestCaseVariable-1641895069818]: 
+    ↓sort [variables.TestCaseVariable-1641895069820]: 
+      value: activity
+    ↓ids [variables.TestCaseVariable-1641895069822]: 
+      value: 53747595
   ↓key [variables.RequestableHttpVariable-1641201320883]: 
     httpName: key
     value: ${lib_stackexchange.key}

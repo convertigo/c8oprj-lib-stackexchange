@@ -63,3 +63,170 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpName: sort
     value: creation
   ↓ids [variables.RequestableHttpVariable-1640879217690]: 
+↓comments_delete_id [transactions.JsonHttpTransaction]: 
+  comment: Delete a comment identified by its id. auth required
+  httpVerb: POST
+  subDir: comments/{id}/delete
+  ↓key [variables.RequestableHttpVariable-1641890477786]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890477789]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890477792]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641890477795]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641890477798]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641890616228]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓comments_edit_id [transactions.JsonHttpTransaction]: 
+  comment: Edit a comment identified by its id. auth required
+  httpVerb: POST
+  subDir: comments/{id}/edit
+  ↓key [variables.RequestableHttpVariable-1641890653083]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890653086]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890653089]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641890653092]: 
+    httpMethod: POST
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641890653095]: 
+    httpMethod: POST
+  ↓body [variables.RequestableHttpVariable-1641890693868]: 
+    httpMethod: POST
+    httpName: body
+  ↓preview [variables.RequestableHttpVariable-1641890653098]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓comments_flags_add_id [transactions.JsonHttpTransaction]: 
+  comment: Casts a flag on the given comment. auth required
+  httpVerb: POST
+  subDir: comments/{id}/flags/add
+  ↓key [variables.RequestableHttpVariable-1641890740555]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890740558]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890740561]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641890740564]: 
+    httpMethod: POST
+  ↓option_id [variables.RequestableHttpVariable-1641890740567]: 
+    httpMethod: POST
+    httpName: option_id
+  ↓comment [variables.RequestableHttpVariable-1641890740570]: 
+    httpMethod: POST
+    httpName: comment
+  ↓preview [variables.RequestableHttpVariable-1641890740579]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓comments_flags_options_id [transactions.JsonHttpTransaction]: 
+  comment: Returns valid flag options for the given comment. auth required
+  subDir: comments/{id}/flags/options
+  ↓key [variables.RequestableHttpVariable-1641890740583]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890740586]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890740589]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641890740592]: 
+    httpName: site
+    value: stackoverflow
+  ↓id [variables.RequestableHttpVariable-1641890740595]: 
+↓comments_upvote_id [transactions.JsonHttpTransaction]: 
+  comment: Casts an upvote on the given comment. auth required
+  httpVerb: POST
+  subDir: comments/{id}/upvote
+  ↓key [variables.RequestableHttpVariable-1641890740599]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890740602]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890740605]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641890740611]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641890740614]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
+↓comments_upvote_undo_id [transactions.JsonHttpTransaction]: 
+  comment: Undoes an upvote on the given comment. auth required
+  httpVerb: POST
+  subDir: comments/{id}/upvote/undo
+  ↓key [variables.RequestableHttpVariable-1641890740618]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641890740621]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641890740624]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641890740630]: 
+    httpMethod: POST
+  ↓preview [variables.RequestableHttpVariable-1641890740633]: 
+    httpMethod: POST
+    httpName: preview
+    value: true

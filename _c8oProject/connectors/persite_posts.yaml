@@ -63,6 +63,35 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpName: sort
     value: activity
   ↓ids [variables.RequestableHttpVariable-1640881557291]: 
+↓posts_comments_add_id [transactions.JsonHttpTransaction]: 
+  comment: Create a new comment on the post identified by id. auth required
+  httpVerb: POST
+  subDir: posts/{id}/comments/add
+  ↓key [variables.RequestableHttpVariable-1641891302944]: 
+    httpMethod: POST
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641891302947]: 
+    httpMethod: POST
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641891302950]: 
+    httpMethod: POST
+    httpName: filter
+    value: default
+  ↓id [variables.RequestableHttpVariable-1641891302953]: 
+    httpMethod: POST
+  ↓body [variables.RequestableHttpVariable-1641891392711]: 
+    httpMethod: POST
+    httpName: body
+  ↓preview [variables.RequestableHttpVariable-1641891302962]: 
+    httpMethod: POST
+    httpName: preview
+    value: true
 ↓posts_comments_ids [transactions.JsonHttpTransaction]: 
   comment: Get comments on the posts (question or answer) identified by a set of ids.
   subDir: posts/{ids}/comments

@@ -204,10 +204,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641836645174]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641836645177]: 
     httpMethod: POST
   ↓preview [variables.RequestableHttpVariable-1641836645180]: 
@@ -234,10 +230,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641836645193]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641836645196]: 
     httpMethod: POST
   ↓preview [variables.RequestableHttpVariable-1641836645199]: 
@@ -395,10 +387,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641837008772]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641837008775]: 
     httpMethod: POST
   ↓slug [variables.RequestableHttpVariable-1641837058504]: 
@@ -428,10 +416,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641837008791]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641837008794]: 
     httpMethod: POST
   ↓slug [variables.RequestableHttpVariable-1641837140421]: 
@@ -499,10 +483,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641836645212]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641836645215]: 
     httpMethod: POST
   ↓preview [variables.RequestableHttpVariable-1641836645218]: 
@@ -529,10 +509,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
     httpMethod: POST
     httpName: filter
     value: default
-  ↓site [variables.RequestableHttpVariable-1641836645231]: 
-    httpMethod: POST
-    httpName: site
-    value: stackoverflow
   ↓id [variables.RequestableHttpVariable-1641836645234]: 
     httpMethod: POST
   ↓preview [variables.RequestableHttpVariable-1641836645237]: 

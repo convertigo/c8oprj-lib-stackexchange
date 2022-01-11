@@ -24,6 +24,7 @@
   ↓persite_revisions [connectors.HttpConnector]: 🗏 connectors/persite_revisions.yaml
   ↓persite_search [connectors.HttpConnector]: 🗏 connectors/persite_search.yaml
   ↓persite_suggested_edits [connectors.HttpConnector]: 🗏 connectors/persite_suggested_edits.yaml
+  ↓persite_tags [connectors.HttpConnector]: 🗏 connectors/persite_tags.yaml
   ↓persite_users [connectors.HttpConnector]: 🗏 connectors/persite_users.yaml
   ↓stackoverflow [connectors.HttpConnector]: 🗏 connectors/stackoverflow.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml

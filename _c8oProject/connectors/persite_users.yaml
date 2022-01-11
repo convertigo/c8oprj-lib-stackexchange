@@ -8,6 +8,13 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
   ↓key [variables.RequestableHttpVariable-1641395709302]: 
     httpName: key
     value: ${lib_stackexchange.key}
+  ↓access_token [variables.RequestableHttpVariable-1641395830613]: 
+    httpName: access_token
+    value: 
+      - ↑ciphered: true
+      - ↑traceable: false
+      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
+    visibility: '-1'
   ↓filter [variables.RequestableHttpVariable-1641395709305]: 
     httpName: filter
     value: default
@@ -32,10 +39,38 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
   ↓sort [variables.RequestableHttpVariable-1641395808957]: 
     httpName: sort
     value: reputation
-  ↓access_token [variables.RequestableHttpVariable-1641395830613]: 
-    httpName: access_token
-    value: 
-      - ↑ciphered: true
-      - ↑traceable: false
-      - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
-    visibility: '-1'
+↓users [transactions.JsonHttpTransaction]: 
+  comment: Get all users on the site.
+  subDir: users
+  ↓Test_Case [core.TestCase]: 
+    ↓inname [variables.TestCaseVariable-1641894241758]: 
+      value: vorbe
+  ↓key [variables.RequestableHttpVariable-1641893705571]: 
+    httpName: key
+    value: ${lib_stackexchange.key}
+  ↓filter [variables.RequestableHttpVariable-1641893705574]: 
+    httpName: filter
+    value: default
+  ↓site [variables.RequestableHttpVariable-1641893705577]: 
+    httpName: site
+    value: stackoverflow
+  ↓page [variables.RequestableHttpVariable-1641893705580]: 
+    httpName: page
+  ↓pagesize [variables.RequestableHttpVariable-1641893705583]: 
+    httpName: pagesize
+  ↓fromdate [variables.RequestableHttpVariable-1641893705586]: 
+    httpName: fromdate
+  ↓todate [variables.RequestableHttpVariable-1641893705589]: 
+    httpName: todate
+  ↓order [variables.RequestableHttpVariable-1641893705592]: 
+    httpName: order
+    value: desc
+  ↓min [variables.RequestableHttpVariable-1641893705595]: 
+    httpName: min
+  ↓max [variables.RequestableHttpVariable-1641893705598]: 
+    httpName: max
+  ↓sort [variables.RequestableHttpVariable-1641893705601]: 
+    httpName: sort
+    value: reputation
+  ↓inname [variables.RequestableHttpVariable-1641894157295]: 
+    httpName: inname

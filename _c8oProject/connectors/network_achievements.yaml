@@ -7,9 +7,6 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
   ↓key [variables.RequestableHttpVariable-1641475721840]: 
     httpName: key
     value: ${lib_stackexchange.key}
-  ↓filter [variables.RequestableHttpVariable-1641475721843]: 
-    httpName: filter
-    value: default
   ↓access_token [variables.RequestableHttpVariable-1641475721846]: 
     httpName: access_token
     value: 
@@ -17,6 +14,9 @@ server: api.stackexchange.com/${lib_stackexchange.api_version=2.3}
       - ↑traceable: false
       - →→: xdf426205cb83a225ee6a11b210de9d10331b00f7e4e1083d51264ffa9d08a5c7006585f6a4e2be0e7fafe915ba3beee3
     visibility: '-1'
+  ↓filter [variables.RequestableHttpVariable-1641475721843]: 
+    httpName: filter
+    value: default
   ↓page [variables.RequestableHttpVariable-1641475721849]: 
     httpName: page
   ↓pagesize [variables.RequestableHttpVariable-1641475721852]: 
